@@ -30,23 +30,39 @@ struct ScoreCardView: View{
                         .font(.title.bold())
                         .padding(.bottom,10)
                     
-                    Image("Medal")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 220)
                     
-                    Link(destination: URL(string: "https://youtu.be/QfXUeiEMQOI")!, label: {
-                        Text("강의 영상")
-                            .font(.system(size: 30))
-                            .frame(width: 300, height: 60)
-                            .background(Color.black)
-                            .foregroundColor(.white)
-                            .cornerRadius(20)
-                            .padding()
-                    })
+                    Link(destination: URL(string: "https://www.youtube.com/watch?v=zB8nDo2ZKMw")!, label: {
+                            Text("JLPT N1 강의")
+                                .font(.system(size: 30))
+                                .frame(width: 300, height: 60)
+                                .background(Color.black)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
+                                .padding()
+                        })
                     
-                    Link(destination: URL(string: "https://youtube.com/shorts/aBkXWvOzHfA")!, label: {
-                            Text("개발 목적 및 과정")
+                    Link(destination: URL(string: "https://www.youtube.com/watch?v=vg-OkwsC1Tk")!, label: {
+                            Text("JLPT N2 강의")
+                                .font(.system(size: 30))
+                                .frame(width: 300, height: 60)
+                                .background(Color.black)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
+                                .padding()
+                        })
+                    
+                    Link(destination: URL(string: "https://www.youtube.com/watch?v=BlUFq-qHckc")!, label: {
+                            Text("JLPT N3 강의")
+                                .font(.system(size: 30))
+                                .frame(width: 300, height: 60)
+                                .background(Color.black)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
+                                .padding()
+                        })
+                    
+                    Link(destination: URL(string: "https://www.youtube.com/watch?v=QfXUeiEMQOI")!, label: {
+                            Text("JLPT N4 강의")
                                 .font(.system(size: 30))
                                 .frame(width: 300, height: 60)
                                 .background(Color.black)

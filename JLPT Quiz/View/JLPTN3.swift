@@ -23,7 +23,16 @@ struct JLPTN3: View {
     var body: some View {
         if let info = quizInfo{
             VStack(spacing: 10){
-                Text(info.title)
+                Button {
+                                dismiss()
+                            } label: {
+                                Image(systemName: "xmark")
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.red)
+                            }
+                            .hAlign(.leading)
+                Text("JLPT N3")
                     .font(.title)
                     .fontWeight(.semibold)
                     .hAlign(.leading)
@@ -100,7 +109,7 @@ struct JLPTN3: View {
             VStack(spacing: 12){
                 ForEach(question.options,id: \.self){option in
                     ZStack{
-                        OptionView(option, question.answer == option && question.tappedAnswer != "" ? Color.green : Color.purple)
+                        OptionView(option, question.answer == option && question.tappedAnswer != "" ? Color.green : Color.black)
 
                         if question.tappedAnswer == option && question.tappedAnswer != question.answer {
                             OptionView(option, Color.red)
