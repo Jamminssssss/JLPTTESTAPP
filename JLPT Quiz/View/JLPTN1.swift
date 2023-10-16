@@ -8,6 +8,7 @@
 import SwiftUI
 import FirebaseFirestore
 import FirebaseAuth
+import Foundation
 
 struct JLPTN1: View {
     @State private var quizInfo: Info?
@@ -19,24 +20,25 @@ struct JLPTN1: View {
     @State private var currentIndex: Int = 0
     @State private var score: CGFloat = 0
     @State private var showScoreCard: Bool = false
-
+    
     var body: some View {
         if let info = quizInfo{
             VStack(spacing: 10){
                 Button {
-                                dismiss()
-                            } label: {
-                                Image(systemName: "xmark")
-                                    .font(.title3)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.red)
-                            }
-                            .hAlign(.leading)
+                    dismiss()
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.red)
+                }
+                .hAlign(.leading)
                 
                 Text("JLPT N1")
                     .font(.title)
                     .fontWeight(.semibold)
                     .hAlign(.leading)
+                    .foregroundColor(.black)
                 
                 GeometryReader{
                     let _ = $0.size
@@ -57,7 +59,7 @@ struct JLPTN1: View {
                     }else{
                         withAnimation(.easeInOut){
                             currentIndex += 1
-        
+                            
                         }
                     }
                 }
@@ -91,7 +93,7 @@ struct JLPTN1: View {
             }
         }
     }
-
+    
     @ViewBuilder
     func QuestionView(question: Question)->some View{
         VStack(alignment: .leading, spacing: 15) {
@@ -99,20 +101,20 @@ struct JLPTN1: View {
                 .font(.callout)
                 .foregroundColor(.gray)
                 .hAlign(.leading)
-
+            
             Text(question.question)
                 .font(.system(size: 17))
                 .font(.title3)
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
-
+            
             VStack(spacing: 12){
                 ForEach(question.options,id: \.self){option in
                     ZStack{
-                        OptionView(option, question.answer == option && question.tappedAnswer != "" ? Color.green : Color.gray)
-
+                        OptionView(option, question.answer == option && question.tappedAnswer != "" ? Color.green : Color.black)
+                        
                         if question.tappedAnswer == option && question.tappedAnswer != question.answer {
-                            OptionView(option, Color.black)
+                            OptionView(option, Color.red)
                         }
                     }
                     .contentShape(Rectangle())
@@ -120,7 +122,7 @@ struct JLPTN1: View {
                         guard questions[currentIndex].tappedAnswer == "" else{return}
                         withAnimation(.easeInOut){
                             questions[currentIndex].tappedAnswer = option
-
+                            
                             if question.answer == option{
                                 score += 1.0
                             }
@@ -138,47 +140,54 @@ struct JLPTN1: View {
         }
         .padding(.horizontal,15)
     }
-
+    
     @ViewBuilder
-       func OptionView(_ option: String,_ tint: Color)->some View{
-           Text(option)
-               .fixedSize(horizontal: false, vertical: true)
-               .font(.system(size: 15))
-               .foregroundColor(tint)
-               .padding(.horizontal,5)
-               .padding(.vertical,10)
-               .hAlign(.center)
-               .background {
-                   RoundedRectangle(cornerRadius: 12, style: .continuous)
-                       .fill(tint.opacity(0.15))
-                       .background {
-                           RoundedRectangle(cornerRadius: 12, style: .continuous)
-                               .stroke(tint.opacity(tint == .gray ? 0.15 : 1),lineWidth: 2)
-                       }
-           }
-       }
-   
-
-    func fetchData()async throws{
+    func OptionView(_ option: String,_ tint: Color)->some View{
+        Text(option)
+            .fixedSize(horizontal: false, vertical: true)
+            .font(.system(size: 15))
+            .foregroundColor(tint)
+            .padding(.horizontal,5)
+            .padding(.vertical,10)
+            .hAlign(.center)
+            .background {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(tint.opacity(0.15))
+                    .background {
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .stroke(tint.opacity(tint == .gray ? 0.15 : 1),lineWidth: 2)
+                    }
+            }
+    }
+    
+    
+    
+    
+    func fetchData() async throws {
         try await loginUserAnonymous()
         let info = try await Firestore.firestore().collection("Quiz").document("Info").getDocument().data(as: Info.self)
-        let questions = try await Firestore.firestore().collection("Quiz").document("Info").collection("Questions").getDocuments().documents.compactMap{
+        var questions = try await Firestore.firestore().collection("Quiz").document("Info").collection("Questions").getDocuments().documents.compactMap{
             try $0.data(as: Question.self)
         }
-
+        
+        // Shuffle the questions
+        questions.shuffle()
+        
+        // Make a copy of the shuffled questions
+        let shuffledQuestions = questions
+        
         await MainActor.run(body: {
             self.quizInfo = info
-            self.questions = questions
+            self.questions = shuffledQuestions
         })
     }
-
-    func loginUserAnonymous()async throws{
-        if !logStatus{
+    
+    func loginUserAnonymous() async throws {
+        if !logStatus {
             try await Auth.auth().signInAnonymously()
         }
     }
 }
-
 
 #Preview {
     ContentView()

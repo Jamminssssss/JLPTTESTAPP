@@ -36,6 +36,8 @@ struct JLPTN2: View {
                     .font(.title)
                     .fontWeight(.semibold)
                     .hAlign(.leading)
+                    .foregroundColor(.black)
+
                 
                 GeometryReader{
                     let _ = $0.size
@@ -156,21 +158,30 @@ struct JLPTN2: View {
            }
        }
 
-    func fetchData()async throws{
+    
+    func fetchData() async throws {
         try await loginUserAnonymous()
         let info = try await Firestore.firestore().collection("Quiz").document("Info").getDocument().data(as: Info.self)
-        let questions = try await Firestore.firestore().collection("Quiz").document("Info").collection("Questions1").getDocuments().documents.compactMap{
+        var questions = try await Firestore.firestore().collection("Quiz").document("Info").collection("Questions").getDocuments().documents.compactMap{
             try $0.data(as: Question.self)
         }
-
+        
+        // Shuffle the questions
+        questions.shuffle()
+        
+        // Make a copy of the shuffled questions
+        let shuffledQuestions = questions
+        
+        
+        
         await MainActor.run(body: {
             self.quizInfo = info
-            self.questions = questions
+            self.questions = shuffledQuestions
         })
     }
-
-    func loginUserAnonymous()async throws{
-        if !logStatus{
+    
+    func loginUserAnonymous() async throws {
+        if !logStatus {
             try await Auth.auth().signInAnonymously()
         }
     }
