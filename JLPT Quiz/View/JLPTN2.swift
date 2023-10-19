@@ -21,7 +21,7 @@ struct JLPTN2: View {
     @State private var showScoreCard: Bool = false
 
     var body: some View {
-        if let info = quizInfo{
+        if let _ = quizInfo{
             VStack(spacing: 10){
                 Button {
                                 dismiss()
@@ -99,18 +99,19 @@ struct JLPTN2: View {
                 .font(.callout)
                 .foregroundColor(.gray)
                 .hAlign(.leading)
-
-            Text(question.question)
+            
+            // 줄바꿈 문자를 사용하여 여러 줄의 텍스트를 표시합니다.
+            Text(question.question.replacingOccurrences(of: "\\n", with: "\n"))
                 .font(.system(size: 17))
                 .font(.title3)
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
-
+                
             VStack(spacing: 12){
                 ForEach(question.options,id: \.self){option in
                     ZStack{
                         OptionView(option, question.answer == option && question.tappedAnswer != "" ? Color.green : Color.black)
-
+                        
                         if question.tappedAnswer == option && question.tappedAnswer != question.answer {
                             OptionView(option, Color.red)
                         }
@@ -120,7 +121,7 @@ struct JLPTN2: View {
                         guard questions[currentIndex].tappedAnswer == "" else{return}
                         withAnimation(.easeInOut){
                             questions[currentIndex].tappedAnswer = option
-
+                            
                             if question.answer == option{
                                 score += 1.0
                             }
@@ -162,7 +163,7 @@ struct JLPTN2: View {
     func fetchData() async throws {
         try await loginUserAnonymous()
         let info = try await Firestore.firestore().collection("Quiz").document("Info").getDocument().data(as: Info.self)
-        var questions = try await Firestore.firestore().collection("Quiz").document("Info").collection("Questions").getDocuments().documents.compactMap{
+        var questions = try await Firestore.firestore().collection("Quiz").document("Info").collection("Questions1").getDocuments().documents.compactMap{
             try $0.data(as: Question.self)
         }
         

@@ -22,7 +22,7 @@ struct JLPTN1: View {
     @State private var showScoreCard: Bool = false
     
     var body: some View {
-        if let info = quizInfo{
+        if let _ = quizInfo{
             VStack(spacing: 10){
                 Button {
                     dismiss()
@@ -102,12 +102,13 @@ struct JLPTN1: View {
                 .foregroundColor(.gray)
                 .hAlign(.leading)
             
-            Text(question.question)
+            // 줄바꿈 문자를 사용하여 여러 줄의 텍스트를 표시합니다.
+            Text(question.question.replacingOccurrences(of: "\\n", with: "\n"))
                 .font(.system(size: 17))
                 .font(.title3)
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
-            
+                
             VStack(spacing: 12){
                 ForEach(question.options,id: \.self){option in
                     ZStack{
@@ -140,6 +141,7 @@ struct JLPTN1: View {
         }
         .padding(.horizontal,15)
     }
+
     
     @ViewBuilder
     func OptionView(_ option: String,_ tint: Color)->some View{
