@@ -84,9 +84,7 @@ struct ScoreCardView: View{
             
             CustomButton(title: "다시 시작") {
                 
-                Firestore.firestore().collection("Quiz").document("Info").updateData([
-                    "peopleAttended": FieldValue.increment(1.0)
-                ])
+                Firestore.firestore().collection("Quiz").document("Info")
                 onDismiss()
                 dismiss()
             }
