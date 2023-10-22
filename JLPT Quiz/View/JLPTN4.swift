@@ -19,6 +19,8 @@ struct JLPTN4: View {
     @State private var currentIndex: Int = 0
     @State private var score: CGFloat = 0
     @State private var showScoreCard: Bool = false
+    @State private var fontSizeChange: CGFloat = 0
+
 
     var body: some View {
         if let _ = quizInfo{
@@ -66,7 +68,7 @@ struct JLPTN4: View {
             .padding(15)
             .hAlign(.center).vAlign(.top)
             .background {
-                Color("BG")
+                Color.purple
                     .ignoresSafeArea()
             }
             .environment(\.colorScheme, .dark)
@@ -103,11 +105,11 @@ struct JLPTN4: View {
             
             // 줄바꿈 문자를 사용하여 여러 줄의 텍스트를 표시합니다.
             Text(question.question.replacingOccurrences(of: "\\n", with: "\n"))
-                .font(.system(size: 17))
+                .font(.system(size: 17 + fontSizeChange))
                 .font(.title3)
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
-                
+            
             VStack(spacing: 12){
                 ForEach(question.options,id: \.self){option in
                     ZStack{
@@ -139,26 +141,37 @@ struct JLPTN4: View {
                 .fill(Color.white.opacity(0.6))
         }
         .padding(.horizontal,15)
+        .gesture(DragGesture().onEnded { value in
+                let swipeDistance = value.translation.width / 10
+                if swipeDistance > 0 {
+                    // Increase font size when swiping right
+                    fontSizeChange = min(swipeDistance, 10) // Limit maximum font size increase
+                } else {
+                    // Decrease font size when swiping left
+                    fontSizeChange = max(swipeDistance, -10) // Limit maximum font size decrease
+                }
+            })
     }
 
+    
     @ViewBuilder
-       func OptionView(_ option: String,_ tint: Color)->some View{
-           Text(option)
-               .fixedSize(horizontal: false, vertical: true)
-               .font(.system(size: 15))
-               .foregroundColor(tint)
-               .padding(.horizontal,5)
-               .padding(.vertical,10)
-               .hAlign(.center)
-               .background {
-                   RoundedRectangle(cornerRadius: 12, style: .continuous)
-                       .fill(tint.opacity(0.15))
-                       .background {
-                           RoundedRectangle(cornerRadius: 12, style: .continuous)
-                               .stroke(tint.opacity(tint == .gray ? 0.15 : 1),lineWidth: 2)
-                       }
-           }
-       }
+    func OptionView(_ option: String,_ tint: Color)->some View{
+        Text(option)
+            .fixedSize(horizontal: false, vertical: true)
+            .font(.system(size: 15 + fontSizeChange))
+            .foregroundColor(tint)
+            .padding(.horizontal,5)
+            .padding(.vertical,10)
+            .hAlign(.center)
+            .background {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(tint.opacity(0.15))
+                    .background {
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .stroke(tint.opacity(tint == .gray ? 0.15 : 1),lineWidth: 2)
+                    }
+            }
+    }
 
     
     func fetchData() async throws {

@@ -24,7 +24,7 @@ struct CustomButton: View{
                 .foregroundColor(.green)
                 .background {
                     Rectangle()
-                        .fill(Color("Pink"))
+                        .fill(Color.red)
                         .ignoresSafeArea()
                 }
         }

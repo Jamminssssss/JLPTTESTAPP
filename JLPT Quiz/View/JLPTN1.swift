@@ -20,7 +20,8 @@ struct JLPTN1: View {
     @State private var currentIndex: Int = 0
     @State private var score: CGFloat = 0
     @State private var showScoreCard: Bool = false
-    
+    @State private var fontSizeChange: CGFloat = 0
+
     var body: some View {
         if let _ = quizInfo{
             VStack(spacing: 10){
@@ -67,7 +68,7 @@ struct JLPTN1: View {
             .padding(15)
             .hAlign(.center).vAlign(.top)
             .background {
-                Color("BG")
+                Color.blue
                     .ignoresSafeArea()
             }
             .environment(\.colorScheme, .dark)
@@ -104,11 +105,11 @@ struct JLPTN1: View {
             
             // 줄바꿈 문자를 사용하여 여러 줄의 텍스트를 표시합니다.
             Text(question.question.replacingOccurrences(of: "\\n", with: "\n"))
-                .font(.system(size: 17))
+                .font(.system(size: 17 + fontSizeChange))
                 .font(.title3)
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
-                
+            
             VStack(spacing: 12){
                 ForEach(question.options,id: \.self){option in
                     ZStack{
@@ -140,6 +141,16 @@ struct JLPTN1: View {
                 .fill(Color.white.opacity(0.6))
         }
         .padding(.horizontal,15)
+        .gesture(DragGesture().onEnded { value in
+                let swipeDistance = value.translation.width / 10
+                if swipeDistance > 0 {
+                    // Increase font size when swiping right
+                    fontSizeChange = min(swipeDistance, 10) // Limit maximum font size increase
+                } else {
+                    // Decrease font size when swiping left
+                    fontSizeChange = max(swipeDistance, -10) // Limit maximum font size decrease
+                }
+            })
     }
 
     
@@ -147,7 +158,7 @@ struct JLPTN1: View {
     func OptionView(_ option: String,_ tint: Color)->some View{
         Text(option)
             .fixedSize(horizontal: false, vertical: true)
-            .font(.system(size: 15))
+            .font(.system(size: 15 + fontSizeChange))
             .foregroundColor(tint)
             .padding(.horizontal,5)
             .padding(.vertical,10)
