@@ -22,6 +22,7 @@ struct JLPTN1: View {
     @State private var showScoreCard: Bool = false
     @State private var fontSizeChange: CGFloat = 0
 
+    
     var body: some View {
         if let _ = quizInfo{
             VStack(spacing: 10){
@@ -97,51 +98,52 @@ struct JLPTN1: View {
     
     @ViewBuilder
     func QuestionView(question: Question)->some View{
-        VStack(alignment: .leading, spacing: 15) {
-            Text("Question \(currentIndex + 1)/\(questions.count)")
-                .font(.callout)
-                .foregroundColor(.gray)
-                .hAlign(.leading)
-            
-            // 줄바꿈 문자를 사용하여 여러 줄의 텍스트를 표시합니다.
-            Text(question.question.replacingOccurrences(of: "\\n", with: "\n"))
-                .font(.system(size: 17 + fontSizeChange))
-                .font(.title3)
-                .fontWeight(.semibold)
-                .foregroundColor(.black)
-            
-            VStack(spacing: 12){
-                ForEach(question.options,id: \.self){option in
-                    ZStack{
-                        OptionView(option, question.answer == option && question.tappedAnswer != "" ? Color.green : Color.black)
-                        
-                        if question.tappedAnswer == option && question.tappedAnswer != question.answer {
-                            OptionView(option, Color.red)
-                        }
-                    }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        guard questions[currentIndex].tappedAnswer == "" else{return}
-                        withAnimation(.easeInOut){
-                            questions[currentIndex].tappedAnswer = option
+        ScrollView {
+            VStack(alignment: .leading, spacing: 15) {
+                Text("Question \(currentIndex + 1)/\(questions.count)")
+                    .font(.callout)
+                    .foregroundColor(.gray)
+                    .hAlign(.leading)
+                
+                // 줄바꿈 문자를 사용하여 여러 줄의 텍스트를 표시합니다.
+                Text(question.question.replacingOccurrences(of: "\\n", with: "\n"))
+                    .font(.system(size: 17 + fontSizeChange))
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+            }
+                VStack(spacing: 12){
+                    ForEach(question.options,id: \.self){option in
+                        ZStack{
+                            OptionView(option, question.answer == option && question.tappedAnswer != "" ? Color.green : Color.black)
                             
-                            if question.answer == option{
-                                score += 1.0
+                            if question.tappedAnswer == option && question.tappedAnswer != question.answer {
+                                OptionView(option, Color.red)
+                            }
+                        }
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            guard questions[currentIndex].tappedAnswer == "" else{return}
+                            withAnimation(.easeInOut){
+                                questions[currentIndex].tappedAnswer = option
+                                
+                                if question.answer == option{
+                                    score += 1.0
+                                }
                             }
                         }
                     }
                 }
+                .padding(.vertical,10)
             }
-            .padding(.vertical,10)
-        }
-        .padding(15)
-        .hAlign(.center)
-        .background {
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .fill(Color.white.opacity(0.6))
-        }
-        .padding(.horizontal,15)
-        .gesture(DragGesture().onEnded { value in
+            .padding(15)
+            .hAlign(.center)
+            .background {
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .fill(Color.white.opacity(0.6))
+            }
+            .padding(.horizontal,15)
+            .gesture(DragGesture().onEnded { value in
                 let swipeDistance = value.translation.width / 10
                 if swipeDistance > 0 {
                     // Increase font size when swiping right
@@ -151,26 +153,28 @@ struct JLPTN1: View {
                     fontSizeChange = max(swipeDistance, -10) // Limit maximum font size decrease
                 }
             })
-    }
-
+        }
+    
     
     @ViewBuilder
     func OptionView(_ option: String,_ tint: Color)->some View{
-        Text(option)
-            .fixedSize(horizontal: false, vertical: true)
-            .font(.system(size: 15 + fontSizeChange))
-            .foregroundColor(tint)
-            .padding(.horizontal,5)
-            .padding(.vertical,10)
-            .hAlign(.center)
-            .background {
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .fill(tint.opacity(0.15))
-                    .background {
-                        RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            .stroke(tint.opacity(tint == .gray ? 0.15 : 1),lineWidth: 2)
-                    }
-            }
+        ScrollView {
+            Text(option)
+                .fixedSize(horizontal: false, vertical: true)
+                .font(.system(size: 15 + fontSizeChange))
+                .foregroundColor(tint)
+                .padding(.horizontal,5)
+                .padding(.vertical,10)
+                .hAlign(.center)
+                .background {
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(tint.opacity(0.15))
+                        .background {
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .stroke(tint.opacity(tint == .gray ? 0.15 : 1),lineWidth: 2)
+                        }
+                }
+        }
     }
     
     

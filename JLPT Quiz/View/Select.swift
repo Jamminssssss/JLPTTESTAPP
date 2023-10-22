@@ -82,7 +82,7 @@ struct Select: View {
             }) {
                 Text("JLPTN5")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .background(Color.red)
+                    .background(Color.mint)
                     .foregroundColor(.white)
             }
             .fullScreenCover(isPresented: $showJLPTN5) {
