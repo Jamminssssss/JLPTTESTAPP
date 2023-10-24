@@ -58,26 +58,28 @@ struct Home: View {
 
     @ViewBuilder
     func RulesView(_ rules: [String])->some View{
-        VStack(alignment: .leading, spacing: 15) {
-            Text("시작전에 읽어주세요.")
-                .font(.title3)
-                .fontWeight(.bold)
-                .padding(.bottom,12)
-            
-            ForEach(rules,id: \.self){rule in
-                HStack(alignment: .top, spacing: 10) {
-                    Circle()
-                        .fill(.black)
-                        .frame(width: 8, height: 8)
-                        .offset(y: 6)
-                    Text(rule)
-                        .font(.callout)
-                        .lineLimit(3)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 15) {
+                Text("시작전에 읽어주세요.")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .padding(.bottom,12)
+                
+                ForEach(rules,id: \.self){rule in
+                    HStack(alignment: .top, spacing: 10) {
+                        Circle()
+                            .fill(.black)
+                            .frame(width: 8, height: 8)
+                            .offset(y: 6)
+                        Text(rule)
+                            .font(.callout)
+                            .lineLimit(3)
+                    }
                 }
             }
         }
     }
-
+    
     @ViewBuilder
         func CustomLabel(_ image: String,_ title: String,_ subTitle: String)->some View{
             HStack(spacing: 12){

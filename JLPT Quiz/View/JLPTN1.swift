@@ -21,6 +21,8 @@ struct JLPTN1: View {
     @State private var score: CGFloat = 0
     @State private var showScoreCard: Bool = false
     @State private var fontSizeChange: CGFloat = 0
+    @State private var progress: CGFloat = 0
+    @State private var progressString: String = "0%"
 
     
     var body: some View {
@@ -43,6 +45,26 @@ struct JLPTN1: View {
                     .foregroundColor(.black)
                 
                 GeometryReader{
+                                let size = $0.size
+                    ZStack(alignment: .leading) {
+                        Rectangle()
+                            .fill(.black.opacity(0.2))
+                        
+                        Rectangle()
+                            .fill(Color(.green))
+                            .frame(width: progress * size.width,alignment: .leading)
+                        
+                        Text(progressString)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                                .clipShape(Capsule())
+                            }
+                            .frame(height: 20)
+                            .padding(.top,5)
+                
+                GeometryReader{
                     let _ = $0.size
                     
                     ForEach(questions.indices,id: \.self) { index in
@@ -61,7 +83,8 @@ struct JLPTN1: View {
                     }else{
                         withAnimation(.easeInOut){
                             currentIndex += 1
-                            
+                            progress = CGFloat(currentIndex) / CGFloat(questions.count - 1)
+                            progressString = String(format: "%.0f%%", progress * 100)
                         }
                     }
                 }
@@ -111,6 +134,7 @@ struct JLPTN1: View {
                     .font(.title3)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
+                    
             }
                 VStack(spacing: 12){
                     ForEach(question.options,id: \.self){option in

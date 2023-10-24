@@ -20,7 +20,8 @@ struct JLPTN3: View {
     @State private var score: CGFloat = 0
     @State private var showScoreCard: Bool = false
     @State private var fontSizeChange: CGFloat = 0
-
+    @State private var progress: CGFloat = 0
+    @State private var progressString: String = "0%"
     
     var body: some View {
         if let _ = quizInfo{
@@ -40,6 +41,25 @@ struct JLPTN3: View {
                     .hAlign(.leading)
                     .foregroundColor(.black)
 
+                GeometryReader{
+                                let size = $0.size
+                    ZStack(alignment: .leading) {
+                        Rectangle()
+                            .fill(.black.opacity(0.2))
+                        
+                        Rectangle()
+                            .fill(Color(.purple))
+                            .frame(width: progress * size.width,alignment: .leading)
+                        
+                        Text(progressString)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                                .clipShape(Capsule())
+                            }
+                            .frame(height: 20)
+                            .padding(.top,5)
                 
                 GeometryReader{
                     let _ = $0.size
@@ -60,7 +80,8 @@ struct JLPTN3: View {
                     }else{
                         withAnimation(.easeInOut){
                             currentIndex += 1
-                    
+                            progress = CGFloat(currentIndex) / CGFloat(questions.count - 1)
+                            progressString = String(format: "%.0f%%", progress * 100)
                         }
                     }
                 }
