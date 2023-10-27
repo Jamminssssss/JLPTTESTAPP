@@ -29,10 +29,6 @@ struct Home: View {
                     RulesView(info.rules)
                 }
                 
-                CustomButton(title: "시작", onClick: {
-                    startQuiz.toggle()
-                })
-                .vAlign(.bottom)
             }
             .padding(15)
             .vAlign(.top)
