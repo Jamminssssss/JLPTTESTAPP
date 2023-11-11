@@ -1,6 +1,4 @@
 # JLPT Quiz
-<img width="1008" alt="스크린샷 2023-11-11 오후 1 45 12" src="https://github.com/Jamminssssss/JLPT-Quiz/assets/91593937/ddfae86d-6cb3-4df0-bacc-78f330191e83">
-<img width="1005" alt="스크린샷 2023-11-11 오후 1 47 57" src="https://github.com/Jamminssssss/JLPT-Quiz/assets/91593937/cb554d8a-9356-43fd-b57b-82471ce87c57">
 
 ## outline, summary
 
