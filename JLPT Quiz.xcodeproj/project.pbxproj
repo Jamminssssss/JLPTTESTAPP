@@ -20,7 +20,6 @@
 		16861F6E2AD2D667001B0F81 /* JLPTN3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F6D2AD2D667001B0F81 /* JLPTN3.swift */; };
 		16861F702AD2D672001B0F81 /* JLPTN4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F6F2AD2D672001B0F81 /* JLPTN4.swift */; };
 		16861F722AD2D67B001B0F81 /* JLPTN5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F712AD2D67B001B0F81 /* JLPTN5.swift */; };
-		16861F772AD2EDF0001B0F81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16861F762AD2EDF0001B0F81 /* GoogleService-Info.plist */; };
 		16861F7A2AD2EEE0001B0F81 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 16861F792AD2EEE0001B0F81 /* FirebaseAnalytics */; };
 		16861F862AD2EEE0001B0F81 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 16861F852AD2EEE0001B0F81 /* FirebaseAuth */; };
 		16861F922AD2EEE0001B0F81 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16861F912AD2EEE0001B0F81 /* FirebaseFirestore */; };
@@ -47,7 +46,6 @@
 		16861F6D2AD2D667001B0F81 /* JLPTN3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN3.swift; sourceTree = "<group>"; };
 		16861F6F2AD2D672001B0F81 /* JLPTN4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN4.swift; sourceTree = "<group>"; };
 		16861F712AD2D67B001B0F81 /* JLPTN5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN5.swift; sourceTree = "<group>"; };
-		16861F762AD2EDF0001B0F81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16861FAF2AD2F669001B0F81 /* ScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardView.swift; sourceTree = "<group>"; };
 		16861FB32AD3A528001B0F81 /* Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
 		16EB684D2AD683D6008E695E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				16861F5C2AD2C849001B0F81 /* Model */,
 				160ADA4F2AD18957006FC41D /* JLPT_QuizApp.swift */,
 				160ADA512AD18957006FC41D /* ContentView.swift */,
-				16861F762AD2EDF0001B0F81 /* GoogleService-Info.plist */,
 				160ADA532AD18958006FC41D /* Assets.xcassets */,
 				160ADA552AD18958006FC41D /* Preview Content */,
 			);
@@ -204,7 +201,6 @@
 			files = (
 				160ADA572AD18958006FC41D /* Preview Assets.xcassets in Resources */,
 				160ADA542AD18958006FC41D /* Assets.xcassets in Resources */,
-				16861F772AD2EDF0001B0F81 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
