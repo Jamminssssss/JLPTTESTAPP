@@ -45,7 +45,7 @@ struct JLPTN1: View {
                     .foregroundColor(.black)
                 
                 GeometryReader{
-                                let size = $0.size
+                    let size = $0.size
                     ZStack(alignment: .leading) {
                         Rectangle()
                             .fill(.black.opacity(0.2))
@@ -59,10 +59,10 @@ struct JLPTN1: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity, alignment: .center)
                     }
-                                .clipShape(Capsule())
-                            }
-                            .frame(height: 20)
-                            .padding(.top,5)
+                    .clipShape(Capsule())
+                }
+                .frame(height: 20)
+                .padding(.top,5)
                 
                 GeometryReader{
                     let _ = $0.size
@@ -177,6 +177,7 @@ struct JLPTN1: View {
                     fontSizeChange = max(swipeDistance, -10) // Limit maximum font size decrease
                 }
             })
+
         }
     
     
