@@ -1,7 +1,6 @@
 # JLPT Quiz
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b194cc91-e78a-4f59-a6f6-72b7f57401c3/c63dc65e-3eef-4b36-b0af-158a4251009c/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b194cc91-e78a-4f59-a6f6-72b7f57401c3/2042210b-27dc-4d42-b7d5-eaa387641772/Untitled.png)
+<img width="1008" alt="스크린샷 2023-11-11 오후 1 45 12" src="https://github.com/Jamminssssss/JLPT-Quiz/assets/91593937/ddfae86d-6cb3-4df0-bacc-78f330191e83">
+<img width="1005" alt="스크린샷 2023-11-11 오후 1 47 57" src="https://github.com/Jamminssssss/JLPT-Quiz/assets/91593937/cb554d8a-9356-43fd-b57b-82471ce87c57">
 
 ## outline, summary
 
