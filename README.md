@@ -21,10 +21,6 @@ Provide text, vocabulary, reading, and word questions for the JLPT exam.
 - Show the percentage of correct answers to your questions when you're done solving them.
 - Add a link button that links to YouTube so that you can create and watch YouTube videos of related apps
 
-## App Store
-
-https://apps.apple.com/kr/app/jlpt-quiz/id6468973230
-
 ## a demonstration video
 
 https://www.youtube.com/watch?v=HBDxV7Pfg-w
