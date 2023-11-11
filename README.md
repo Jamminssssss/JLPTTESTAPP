@@ -12,7 +12,7 @@ The purpose of the production is for the test takers preparing for the JLPT test
 
 If you don't know any problems, press the next question button to move on.
 
-Provide text, vocabulary, reading, and word questions for the JLPT exam.
+Provide grammar, vocabulary, reading, and word problems by difficulty level of JLPT N1 to N5.
 
 ## implementation function
 
