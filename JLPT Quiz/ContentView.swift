@@ -20,15 +20,7 @@ struct ContentView: View {
             }
             .tag(0)
             
-            NavigationView {
-                Home()
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .tabItem {
-                Image(systemName: "pencil.line")
-                Text("시작전 읽기")
-            }
-            .tag(1)
+        
             
             NavigationView {
                 ProblemSolving()
@@ -38,7 +30,8 @@ struct ContentView: View {
                 Image(systemName: "play.display")
                 Text("강의영상")
             }
-            .tag(2)
+            .tag(1)
+            
         }
     }
 }
