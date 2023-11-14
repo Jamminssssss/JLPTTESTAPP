@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import AVKit
+import Foundation
+import FirebaseStorage
 
 struct Question: Identifiable, Codable{
     var id: UUID = .init()
@@ -22,6 +23,5 @@ struct Question: Identifiable, Codable{
         case answer
     }
 }
-
 
 

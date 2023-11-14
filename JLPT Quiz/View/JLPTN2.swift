@@ -127,8 +127,7 @@ struct JLPTN2: View {
                 
                 // 줄바꿈 문자를 사용하여 여러 줄의 텍스트를 표시합니다.
                 Text(question.question.replacingOccurrences(of: "\\n", with: "\n"))
-                    .font(.system(size: 17 + fontSizeChange))
-                    .font(.title3)
+                    .font(.system(size: 25 + fontSizeChange))
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
             }
@@ -181,7 +180,7 @@ struct JLPTN2: View {
         ScrollView {
             Text(option)
                 .fixedSize(horizontal: false, vertical: true)
-                .font(.system(size: 15 + fontSizeChange))
+                .font(.system(size: 25 + fontSizeChange))
                 .foregroundColor(tint)
                 .padding(.horizontal,5)
                 .padding(.vertical,10)
