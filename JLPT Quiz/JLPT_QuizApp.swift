@@ -20,3 +20,4 @@ struct JLPT_QuizApp: App {
                 }
             }
         }
+

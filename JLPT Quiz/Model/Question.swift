@@ -25,3 +25,18 @@ struct Question: Identifiable, Codable{
 }
 
 
+struct AudioQuestion {
+    var options: [String]
+    var answer: String
+    var audioFile: String
+    var startTime: TimeInterval
+    var endTime: Double
+
+    init(options: [String], answer: String, audioFile: String, startTime: TimeInterval = 0, endTime: Double) {
+        self.options = options
+        self.answer = answer
+        self.audioFile = audioFile
+        self.startTime = startTime
+        self.endTime = endTime
+    }
+}

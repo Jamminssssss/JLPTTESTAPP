@@ -32,7 +32,15 @@ struct ContentView: View {
             }
             .tag(1)
             
-            
+            NavigationView {
+                SelectAudioTest()
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .tabItem {
+                Image(systemName: "play.display")
+                Text("강의영상")
+            }
+            .tag(2)
         }
     }
 }

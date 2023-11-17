@@ -21,7 +21,7 @@ struct ScoreCardView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
-
+                
                 Text(String(format: "%.0f", score) + "%")
                     .font(.title.bold())
                     .padding(.bottom,10)
@@ -35,6 +35,7 @@ struct ScoreCardView: View {
                 onDismiss()
                 dismiss()
             }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(15)
