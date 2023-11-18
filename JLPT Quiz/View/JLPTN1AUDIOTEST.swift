@@ -81,15 +81,16 @@ struct JLPTN1AUDIOTEST: View {
                 } else {
                     withAnimation(.easeInOut) {
                         currentIndex += 1
-                        progress = CGFloat(currentIndex) / CGFloat(max(1, questions.count - 1))
+                        progress = CGFloat(currentIndex) / CGFloat(questions.count - 1)
                         progressString = String(format: "%.0f%%", progress * 100)
                         tappedAnswer = "" // Reset the selected answer
                         // Play the audio for the current question
+                        
+                        
                     }
                 }
             }
-
-            
+           
         }
         .padding(15)
         .hAlign(.center)
@@ -111,7 +112,7 @@ struct JLPTN1AUDIOTEST: View {
             // Populate questions with sample data
                  questions = [
                      AudioQuestion(options: ["商品を補充する", "さくら店に商品を送る", "ダイレクトメールの発送の準備をする", "店で使用するかざりを作る"], answer: "商品を補充する", audioFile: "N1Q1", startTime: 157.0, endTime: 242.0),
-                     AudioQuestion(options: ["a", "b", "c", "d"], answer: "a", audioFile: "N1Q1-2", startTime: 243.0, endTime: 346.0),
+                     AudioQuestion(options: ["体験者のビデオを見る", "先生にすいせんじょうを依頼する", "保険の加入手続きをする", "指定科目の成績をかくにんする"], answer: "指定科目の成績をかくにんする", audioFile: "N1Q1-2", startTime: 243.0, endTime: 346.0),
                      // Add more questions as needed
                  ]
         }
@@ -152,55 +153,61 @@ struct JLPTN1AUDIOTEST: View {
 
         
         func toggleAudio(audioQuestion: AudioQuestion) {
-            print("Toggling audio")
-            if isPlaying {
-                audioPlayer?.pause()
-                print("Audio paused.")
-            } else {
-                if audioPlayer == nil {
-                    // If audio player is nil, create and play the audio
-                    playAudio(audioQuestion: audioQuestion)
+                print("Toggling audio")
+                if isPlaying {
+                    audioPlayer?.pause()
+                    print("Audio paused.")
                 } else {
-                    // If audio player exists, resume playing
-                    audioPlayer?.play()
+                    if audioPlayer == nil {
+                        // If audio player is nil, create and play the audio
+                        playAudio(audioQuestion: audioQuestion)
+                    } else {
+                        // If audio player exists, resume playing
+                        audioPlayer?.play()
+                    }
+                    print("Audio played.")
                 }
-                print("Audio played.")
+                isPlaying.toggle()
             }
-            isPlaying.toggle()
-        }
 
         
         func playAudio(audioQuestion: AudioQuestion) {
-            stopAudio()
+               stopAudio()
 
-            if let url = Bundle.main.url(forResource: audioQuestion.audioFile, withExtension: "mp3") {
-                print("Playing audio from URL: \(url)")
-                do {
-                    audioPlayer = try AVAudioPlayer(contentsOf: url)
-                    audioPlayer?.prepareToPlay()
-                    audioPlayer?.currentTime = audioQuestion.startTime // Add this line
-                    audioPlayer?.play()
-                } catch {
-                    print("Error creating AVAudioPlayer: \(error)")
-                }
-            } else {
-                print("Audio file not found.")
-            }
-        }
+               if let url = Bundle.main.url(forResource: audioQuestion.audioFile, withExtension: "mp3") {
+                   print("Playing audio from URL: \(url)")
+                   do {
+                       audioPlayer = try AVAudioPlayer(contentsOf: url)
+                       audioPlayer?.prepareToPlay()
+                       audioPlayer?.currentTime = audioQuestion.startTime // Add this line
+                       audioPlayer?.play()
 
+                       // Schedule a timer to stop audio at the end time
+                       let endTime = audioQuestion.endTime
+                       Timer.scheduledTimer(withTimeInterval: endTime - audioQuestion.startTime, repeats: false) { _ in
+                           stopAudio()
+                           isPlaying = false
+                       }
+                   } catch {
+                       print("Error creating AVAudioPlayer: \(error)")
+                   }
+               } else {
+                   print("Audio file not found.")
+               }
+           }
 
-        func restartAudio(audioQuestion: AudioQuestion) {
-            audioPlayer?.currentTime = audioQuestion.startTime
-            audioPlayer?.play()
-            isPlaying = true
-        }
+           func restartAudio(audioQuestion: AudioQuestion) {
+               audioPlayer?.currentTime = audioQuestion.startTime
+               audioPlayer?.play()
+               isPlaying = true
+           }
 
-        func stopAudio() {
-            audioPlayer?.stop()
-            audioPlayer = nil
-            isPlaying = false
-        }
-}
+           func stopAudio() {
+               audioPlayer?.stop()
+               audioPlayer = nil
+               isPlaying = false
+           }
+       }
     
     struct QuestionView: View {
         var audioQuestion: AudioQuestion
