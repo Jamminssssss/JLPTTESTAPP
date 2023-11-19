@@ -11,7 +11,20 @@
 		160ADA522AD18957006FC41D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160ADA512AD18957006FC41D /* ContentView.swift */; };
 		160ADA542AD18958006FC41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160ADA532AD18958006FC41D /* Assets.xcassets */; };
 		160ADA572AD18958006FC41D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160ADA562AD18958006FC41D /* Preview Assets.xcassets */; };
-		1674484D2B07551900DFFD9A /* N1Q1-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1674484C2B07551900DFFD9A /* N1Q1-2.mp3 */; };
+		16258F512B09E5D9001A23F2 /* N1Q4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16258F502B09E5D9001A23F2 /* N1Q4.mp3 */; };
+		16258F532B09E8C4001A23F2 /* N1Q5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16258F522B09E8C4001A23F2 /* N1Q5.mp3 */; };
+		16258F552B09EAD5001A23F2 /* N1Q6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16258F542B09EAD5001A23F2 /* N1Q6.mp3 */; };
+		16258F572B09F699001A23F2 /* N2Q3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16258F562B09F699001A23F2 /* N2Q3.mp3 */; };
+		16258F592B09F9FB001A23F2 /* N2Q4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16258F582B09F9FB001A23F2 /* N2Q4.mp3 */; };
+		16258F5B2B09FA48001A23F2 /* N2Q5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16258F5A2B09FA48001A23F2 /* N2Q5.mp3 */; };
+		162D55552B08E75D00FFC516 /* N1Q3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 162D55542B08E75D00FFC516 /* N1Q3.mp3 */; };
+		1657A7722B08C518004E9818 /* N3Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7712B08C517004E9818 /* N3Q1.mp3 */; };
+		1657A7742B08C52B004E9818 /* N3Q1-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7732B08C52B004E9818 /* N3Q1-2.mp3 */; };
+		1657A7762B08C6E3004E9818 /* N4Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7752B08C6E3004E9818 /* N4Q1.mp3 */; };
+		1657A7782B08C6EE004E9818 /* N4Q1-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7772B08C6EE004E9818 /* N4Q1-2.mp3 */; };
+		1657A77A2B08C842004E9818 /* N5Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7792B08C842004E9818 /* N5Q1.mp3 */; };
+		1657A77C2B08C84B004E9818 /* N5Q1-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A77B2B08C84B004E9818 /* N5Q1-2.mp3 */; };
+		1674484D2B07551900DFFD9A /* N1Q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1674484C2B07551900DFFD9A /* N1Q2.mp3 */; };
 		167D3D482AEA8445004405FD /* ProblemSolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D3D472AEA8445004405FD /* ProblemSolving.swift */; };
 		16861F612AD2D212001B0F81 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F602AD2D212001B0F81 /* Info.swift */; };
 		16861F632AD2D247001B0F81 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F622AD2D247001B0F81 /* Question.swift */; };
@@ -36,6 +49,8 @@
 		16F7A7402B08738C003F8E67 /* JLPTN3AUDIOTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A73F2B08738C003F8E67 /* JLPTN3AUDIOTEST.swift */; };
 		16F7A7422B08739C003F8E67 /* JLPTN4AUDIOTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A7412B08739C003F8E67 /* JLPTN4AUDIOTEST.swift */; };
 		16F7A7442B0873A6003F8E67 /* JLPTN5AUDIOTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A7432B0873A6003F8E67 /* JLPTN5AUDIOTEST.swift */; };
+		16F7A74D2B08865E003F8E67 /* N2Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16F7A74C2B08865E003F8E67 /* N2Q1.mp3 */; };
+		16F7A74F2B088676003F8E67 /* N2Q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16F7A74E2B088676003F8E67 /* N2Q2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +59,20 @@
 		160ADA512AD18957006FC41D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		160ADA532AD18958006FC41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		160ADA562AD18958006FC41D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1674484C2B07551900DFFD9A /* N1Q1-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "N1Q1-2.mp3"; sourceTree = "<group>"; };
+		16258F502B09E5D9001A23F2 /* N1Q4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q4.mp3; sourceTree = "<group>"; };
+		16258F522B09E8C4001A23F2 /* N1Q5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q5.mp3; sourceTree = "<group>"; };
+		16258F542B09EAD5001A23F2 /* N1Q6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q6.mp3; sourceTree = "<group>"; };
+		16258F562B09F699001A23F2 /* N2Q3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N2Q3.mp3; sourceTree = "<group>"; };
+		16258F582B09F9FB001A23F2 /* N2Q4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N2Q4.mp3; sourceTree = "<group>"; };
+		16258F5A2B09FA48001A23F2 /* N2Q5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N2Q5.mp3; sourceTree = "<group>"; };
+		162D55542B08E75D00FFC516 /* N1Q3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q3.mp3; sourceTree = "<group>"; };
+		1657A7712B08C517004E9818 /* N3Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N3Q1.mp3; sourceTree = "<group>"; };
+		1657A7732B08C52B004E9818 /* N3Q1-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "N3Q1-2.mp3"; sourceTree = "<group>"; };
+		1657A7752B08C6E3004E9818 /* N4Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N4Q1.mp3; sourceTree = "<group>"; };
+		1657A7772B08C6EE004E9818 /* N4Q1-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "N4Q1-2.mp3"; sourceTree = "<group>"; };
+		1657A7792B08C842004E9818 /* N5Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N5Q1.mp3; sourceTree = "<group>"; };
+		1657A77B2B08C84B004E9818 /* N5Q1-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "N5Q1-2.mp3"; sourceTree = "<group>"; };
+		1674484C2B07551900DFFD9A /* N1Q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q2.mp3; sourceTree = "<group>"; };
 		1676EAA72AD4F24800B913A1 /* JLPT Quiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "JLPT Quiz.entitlements"; sourceTree = "<group>"; };
 		167D3D472AEA8445004405FD /* ProblemSolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSolving.swift; sourceTree = "<group>"; };
 		16861F602AD2D212001B0F81 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
@@ -65,6 +93,8 @@
 		16F7A73F2B08738C003F8E67 /* JLPTN3AUDIOTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN3AUDIOTEST.swift; sourceTree = "<group>"; };
 		16F7A7412B08739C003F8E67 /* JLPTN4AUDIOTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN4AUDIOTEST.swift; sourceTree = "<group>"; };
 		16F7A7432B0873A6003F8E67 /* JLPTN5AUDIOTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN5AUDIOTEST.swift; sourceTree = "<group>"; };
+		16F7A74C2B08865E003F8E67 /* N2Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N2Q1.mp3; sourceTree = "<group>"; };
+		16F7A74E2B088676003F8E67 /* N2Q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N2Q2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				1676EAA72AD4F24800B913A1 /* JLPT Quiz.entitlements */,
-				16B58C7B2B05F604001328BE /* AudioFile */,
+				162D55582B090FEA00FFC516 /* JLPTN1AUDIO */,
+				162D55592B09100900FFC516 /* JLPTN2AUDIO */,
+				162D555A2B09101500FFC516 /* JLPTN3AUDIO */,
+				162D555B2B09101D00FFC516 /* JLPTN4AUDIO */,
+				162D555C2B09102D00FFC516 /* JLPTN5AUDIO */,
 				16861F5E2AD2D1B8001B0F81 /* View */,
 				16861F5C2AD2C849001B0F81 /* Model */,
 				160ADA4F2AD18957006FC41D /* JLPT_QuizApp.swift */,
@@ -120,6 +154,58 @@
 				160ADA562AD18958006FC41D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		162D55582B090FEA00FFC516 /* JLPTN1AUDIO */ = {
+			isa = PBXGroup;
+			children = (
+				16B58C772B05E171001328BE /* N1Q1.mp3 */,
+				1674484C2B07551900DFFD9A /* N1Q2.mp3 */,
+				162D55542B08E75D00FFC516 /* N1Q3.mp3 */,
+				16258F502B09E5D9001A23F2 /* N1Q4.mp3 */,
+				16258F522B09E8C4001A23F2 /* N1Q5.mp3 */,
+				16258F542B09EAD5001A23F2 /* N1Q6.mp3 */,
+			);
+			path = JLPTN1AUDIO;
+			sourceTree = "<group>";
+		};
+		162D55592B09100900FFC516 /* JLPTN2AUDIO */ = {
+			isa = PBXGroup;
+			children = (
+				16F7A74C2B08865E003F8E67 /* N2Q1.mp3 */,
+				16F7A74E2B088676003F8E67 /* N2Q2.mp3 */,
+				16258F562B09F699001A23F2 /* N2Q3.mp3 */,
+				16258F582B09F9FB001A23F2 /* N2Q4.mp3 */,
+				16258F5A2B09FA48001A23F2 /* N2Q5.mp3 */,
+			);
+			path = JLPTN2AUDIO;
+			sourceTree = "<group>";
+		};
+		162D555A2B09101500FFC516 /* JLPTN3AUDIO */ = {
+			isa = PBXGroup;
+			children = (
+				1657A7712B08C517004E9818 /* N3Q1.mp3 */,
+				1657A7732B08C52B004E9818 /* N3Q1-2.mp3 */,
+			);
+			path = JLPTN3AUDIO;
+			sourceTree = "<group>";
+		};
+		162D555B2B09101D00FFC516 /* JLPTN4AUDIO */ = {
+			isa = PBXGroup;
+			children = (
+				1657A7752B08C6E3004E9818 /* N4Q1.mp3 */,
+				1657A7772B08C6EE004E9818 /* N4Q1-2.mp3 */,
+			);
+			path = JLPTN4AUDIO;
+			sourceTree = "<group>";
+		};
+		162D555C2B09102D00FFC516 /* JLPTN5AUDIO */ = {
+			isa = PBXGroup;
+			children = (
+				1657A7792B08C842004E9818 /* N5Q1.mp3 */,
+				1657A77B2B08C84B004E9818 /* N5Q1-2.mp3 */,
+			);
+			path = JLPTN5AUDIO;
 			sourceTree = "<group>";
 		};
 		16861F5C2AD2C849001B0F81 /* Model */ = {
@@ -152,15 +238,6 @@
 				16861FAF2AD2F669001B0F81 /* ScoreCardView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		16B58C7B2B05F604001328BE /* AudioFile */ = {
-			isa = PBXGroup;
-			children = (
-				16B58C772B05E171001328BE /* N1Q1.mp3 */,
-				1674484C2B07551900DFFD9A /* N1Q1-2.mp3 */,
-			);
-			path = AudioFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,10 +308,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16258F572B09F699001A23F2 /* N2Q3.mp3 in Resources */,
+				1657A77C2B08C84B004E9818 /* N5Q1-2.mp3 in Resources */,
+				16F7A74D2B08865E003F8E67 /* N2Q1.mp3 in Resources */,
+				1657A7722B08C518004E9818 /* N3Q1.mp3 in Resources */,
+				1657A7762B08C6E3004E9818 /* N4Q1.mp3 in Resources */,
+				1657A77A2B08C842004E9818 /* N5Q1.mp3 in Resources */,
+				162D55552B08E75D00FFC516 /* N1Q3.mp3 in Resources */,
 				160ADA572AD18958006FC41D /* Preview Assets.xcassets in Resources */,
-				1674484D2B07551900DFFD9A /* N1Q1-2.mp3 in Resources */,
+				1674484D2B07551900DFFD9A /* N1Q2.mp3 in Resources */,
+				1657A7742B08C52B004E9818 /* N3Q1-2.mp3 in Resources */,
+				16F7A74F2B088676003F8E67 /* N2Q2.mp3 in Resources */,
+				16258F5B2B09FA48001A23F2 /* N2Q5.mp3 in Resources */,
+				16258F532B09E8C4001A23F2 /* N1Q5.mp3 in Resources */,
 				160ADA542AD18958006FC41D /* Assets.xcassets in Resources */,
+				16258F512B09E5D9001A23F2 /* N1Q4.mp3 in Resources */,
+				16258F592B09F9FB001A23F2 /* N2Q4.mp3 in Resources */,
 				16B58C782B05E171001328BE /* N1Q1.mp3 in Resources */,
+				16258F552B09EAD5001A23F2 /* N1Q6.mp3 in Resources */,
+				1657A7782B08C6EE004E9818 /* N4Q1-2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +503,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.8;
+				MARKETING_VERSION = 3.0.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jaeminpark.JLPT-Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.8;
+				MARKETING_VERSION = 3.0.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jaeminpark.JLPT-Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";

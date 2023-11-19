@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import AVFoundation
 
 struct ScoreCardView: View {
     var score: CGFloat
@@ -41,4 +42,3 @@ struct ScoreCardView: View {
         .padding(15)
     }
 }
-
