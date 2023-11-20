@@ -20,10 +20,11 @@ struct ProblemSolving: View {
             Button(action: {
                 showJLPTN1.toggle()
             }) {
-                Text("JLPT N1 강의")
+                Text("N1 講義")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.blue)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN1) {
                 SafariView(url: URL(string: "https://www.youtube.com/watch?v=zB8nDo2ZKMw")!, onDismiss: {
@@ -35,10 +36,11 @@ struct ProblemSolving: View {
             Button(action: {
                 showJLPTN2.toggle()
             }) {
-                Text("JLPT N2 강의")
+                Text("N2 講義")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.green)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN2) {
                 SafariView(url: URL(string: "https://www.youtube.com/watch?v=vg-OkwsC1Tk")!, onDismiss: {
@@ -50,10 +52,11 @@ struct ProblemSolving: View {
             Button(action: {
                 showJLPTN3.toggle()
             }) {
-                Text("JLPT N3 강의")
+                Text("N3 講義")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.orange)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN3) {
                 SafariView(url: URL(string: "https://www.youtube.com/watch?v=BlUFq-qHckc")!, onDismiss: {
@@ -65,10 +68,11 @@ struct ProblemSolving: View {
             Button(action: {
                 showJLPTN4.toggle()
             }) {
-                Text("JLPT N4 강의")
+                Text("N4 講義")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.purple)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN4) {
                 SafariView(url: URL(string: "https://www.youtube.com/watch?v=QfXUeiEMQOI")!, onDismiss: {

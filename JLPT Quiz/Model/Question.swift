@@ -31,14 +31,14 @@ struct AudioQuestion {
     var audioFile: String
     var startTime: TimeInterval
     var endTime: Double
-    var image: String? // Make the image property optional
+    var images: [String]? // 이미지 속성을 배열로 변경하고 선택적으로 만듭니다.
 
-    init(options: [String], answer: String, audioFile: String, startTime: TimeInterval = 0, endTime: Double, image: String? = nil) {
+    init(options: [String], answer: String, audioFile: String, startTime: TimeInterval = 0, endTime: Double, images: [String]? = nil) {
         self.options = options
         self.answer = answer
         self.audioFile = audioFile
         self.startTime = startTime
         self.endTime = endTime
-        self.image = image
+        self.images = images
     }
 }

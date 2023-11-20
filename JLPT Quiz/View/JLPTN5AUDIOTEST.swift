@@ -35,7 +35,7 @@ struct JLPTN5AUDIOTEST: View {
             }
             .hAlign(.leading)
             
-            Text("JLPT N5")
+            Text("N5 聴解")
                 .font(.title)
                 .fontWeight(.semibold)
                 .hAlign(.leading)
@@ -108,11 +108,14 @@ struct JLPTN5AUDIOTEST: View {
             }
         }
         .onAppear {
-            // Populate questions with sample data
             questions = [
-                AudioQuestion(options: ["Option 1", "Option 2", "Option 3", "Option 4"], answer: "Option 1", audioFile: "N5Q1", startTime: 157.0, endTime: 242.0),
-                AudioQuestion(options: ["Option A", "Option B", "Option C", "Option D"], answer: "Option D", audioFile: "N5Q1-2", startTime: 243.0, endTime: 346.0),
-                // Add more questions as needed
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q1", startTime: 160.0, endTime: 219.0,images: ["Image9"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "1", audioFile: "N5Q2", startTime: 221.0, endTime: 279.0,images: ["Image10"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "4", audioFile: "N5Q3", startTime: 281.0, endTime: 342.0,images: ["Image11"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "2", audioFile: "N5Q4", startTime: 344.0, endTime: 413.0,images: ["Image12"]),
+                AudioQuestion(options: ["げつようび", "かようび", "もくようび", "きんようび"], answer: "げつようび", audioFile: "N5Q5", startTime: 414.0, endTime: 500.0),
+                AudioQuestion(options: ["1かいの 3ばん", "1かいの 4ばん", "2かいの 3ばん", "2かいの 4ばん"], answer: "2かいの 4ばん", audioFile: "N5Q6", startTime: 502.0, endTime: 562.0),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q7", startTime: 564.0, endTime: 635.0,images: ["Image13"])
             ]
         }
     }
@@ -210,20 +213,32 @@ struct JLPTN5AUDIOTEST: View {
         var onTap: (String) -> Void
         @State var isPlaying: Bool = false
         @State var audioPlayer: AVAudioPlayer?
-        
+
         var body: some View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 15) {
+                    
+                    // ForEach를 사용하여 여러 이미지를 표시합니다.
+                    ForEach(audioQuestion.images ?? [], id: \.self) {
+                        Image($0)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxHeight: 200)
+                            .cornerRadius(12)
+                            .padding(.bottom, 10)
+                    }
+
+                    
                     HStack {
                         Spacer()
                         PlayButtonView(audioQuestion: audioQuestion, isPlaying: $isPlaying, audioPlayer: $audioPlayer)
                         Spacer()
                     }
-                    
+
                     ForEach(audioQuestion.options, id: \.self) { option in
                         ZStack {
                             OptionView(option: option, tint: audioQuestion.answer == option && tappedAnswer != "" ? Color.green : Color.black)
-                            
+
                             if tappedAnswer == option && tappedAnswer != audioQuestion.answer {
                                 OptionView(option: option, tint: Color.red)
                             }

@@ -21,10 +21,11 @@ struct Select: View {
             Button(action: {
                 showJLPTN1.toggle()
             }) {
-                Text("JLPTN1")
+                Text("N1 文字、語彙、文法、読解")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.blue)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN1) {
                 JLPTN1(onFinish: {
@@ -36,10 +37,11 @@ struct Select: View {
             Button(action: {
                 showJLPTN2.toggle()
             }) {
-                Text("JLPTN2")
+                Text("N2 文字、語彙、文法、読解")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.green)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN2) {
                 JLPTN2(onFinish: {
@@ -51,10 +53,11 @@ struct Select: View {
             Button(action: {
                 showJLPTN3.toggle()
             }) {
-                Text("JLPTN3")
+                Text("N3 文字、語彙、文法、読解")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.orange)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN3) {
                 JLPTN3(onFinish: {
@@ -66,10 +69,11 @@ struct Select: View {
             Button(action: {
                 showJLPTN4.toggle()
             }) {
-                Text("JLPTN4")
+                Text("N4 文字、語彙、文法、読解")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.purple)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN4) {
                 JLPTN4(onFinish: {
@@ -81,10 +85,11 @@ struct Select: View {
             Button(action: {
                 showJLPTN5.toggle()
             }) {
-                Text("JLPTN5")
+                Text("N5 文字、語彙、文法、読解")
+                    .font(.title)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.mint)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
             }
             .fullScreenCover(isPresented: $showJLPTN5) {
                 JLPTN5(onFinish: {

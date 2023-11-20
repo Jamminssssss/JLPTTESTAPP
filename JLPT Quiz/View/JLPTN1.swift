@@ -38,7 +38,7 @@ struct JLPTN1: View {
                 }
                 .hAlign(.leading)
                 
-                Text("JLPT N1")
+                Text("N1 文字、語彙、文法、読解")
                     .font(.title)
                     .fontWeight(.semibold)
                     .hAlign(.leading)

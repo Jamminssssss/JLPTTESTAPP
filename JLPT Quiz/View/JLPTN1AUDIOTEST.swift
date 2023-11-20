@@ -35,7 +35,7 @@ struct JLPTN1AUDIOTEST: View {
             }
             .hAlign(.leading)
             
-            Text("JLPT N1")
+            Text("N1 聴解")
                 .font(.title)
                 .fontWeight(.semibold)
                 .hAlign(.leading)

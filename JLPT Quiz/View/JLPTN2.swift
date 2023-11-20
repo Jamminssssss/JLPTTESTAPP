@@ -35,7 +35,7 @@ struct JLPTN2: View {
                                     .foregroundColor(.red)
                             }
                             .hAlign(.leading)
-                Text("JLPT N2")
+                Text("N2 文字、語彙、文法、読解")
                     .font(.title)
                     .fontWeight(.semibold)
                     .hAlign(.leading)
