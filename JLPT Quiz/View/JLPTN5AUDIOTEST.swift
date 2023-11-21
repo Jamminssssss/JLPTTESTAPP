@@ -8,6 +8,7 @@
 import SwiftUI
 import AVFoundation
 
+
 struct JLPTN5AUDIOTEST: View {
     @State private var quizInfo: Info?
     @State private var questions: [AudioQuestion] = []
@@ -20,7 +21,7 @@ struct JLPTN5AUDIOTEST: View {
     @State private var isPlaying: Bool = false
     @State private var tappedAnswer: String = ""
     @Environment(\.dismiss) private var dismiss
-    
+
     var onFinish: () -> ()
     
     var body: some View {
@@ -78,7 +79,7 @@ struct JLPTN5AUDIOTEST: View {
             CustomButton(title: currentIndex == (questions.count - 1) ? "끝" : "다음 문제") {
                 // Stop the audio
                 audioPlayer?.stop()
-
+                
                 if currentIndex == (questions.count - 1) {
                     showScoreCard.toggle()
                     
@@ -109,16 +110,18 @@ struct JLPTN5AUDIOTEST: View {
         }
         .onAppear {
             questions = [
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q1", startTime: 160.0, endTime: 219.0,images: ["Image9"]),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "1", audioFile: "N5Q2", startTime: 221.0, endTime: 279.0,images: ["Image10"]),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "4", audioFile: "N5Q3", startTime: 281.0, endTime: 342.0,images: ["Image11"]),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "2", audioFile: "N5Q4", startTime: 344.0, endTime: 413.0,images: ["Image12"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q1", startTime: 160.0, endTime: 219.0,images: ["image9"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "1", audioFile: "N5Q2", startTime: 221.0, endTime: 279.0,images: ["image10"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "4", audioFile: "N5Q3", startTime: 281.0, endTime: 342.0,images: ["image11"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "2", audioFile: "N5Q4", startTime: 344.0, endTime: 413.0,images: ["image12"]),
                 AudioQuestion(options: ["げつようび", "かようび", "もくようび", "きんようび"], answer: "げつようび", audioFile: "N5Q5", startTime: 414.0, endTime: 500.0),
                 AudioQuestion(options: ["1かいの 3ばん", "1かいの 4ばん", "2かいの 3ばん", "2かいの 4ばん"], answer: "2かいの 4ばん", audioFile: "N5Q6", startTime: 502.0, endTime: 562.0),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q7", startTime: 564.0, endTime: 635.0,images: ["Image13"])
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q7", startTime: 564.0, endTime: 635.0,images: ["image13"])
             ]
+           
         }
     }
+    
     
     struct PlayButtonView: View {
         var audioQuestion: AudioQuestion
@@ -208,37 +211,31 @@ struct JLPTN5AUDIOTEST: View {
     }
     
     struct QuestionView: View {
-        var audioQuestion: AudioQuestion
-        @Binding var tappedAnswer: String
-        var onTap: (String) -> Void
-        @State var isPlaying: Bool = false
-        @State var audioPlayer: AVAudioPlayer?
+            var audioQuestion: AudioQuestion
+            @Binding var tappedAnswer: String
+            var onTap: (String) -> Void
+            @State var isPlaying: Bool = false
+            @State var audioPlayer: AVAudioPlayer?
 
         var body: some View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 15) {
-                    
-                    // ForEach를 사용하여 여러 이미지를 표시합니다.
-                    ForEach(audioQuestion.images ?? [], id: \.self) {
-                        Image($0)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 200)
-                            .cornerRadius(12)
-                            .padding(.bottom, 10)
-                    }
-
-                    
+                    ForEach(audioQuestion.images ?? [], id: \.self) { imageName in
+                                        Image(imageName)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                           
+                                    }
                     HStack {
                         Spacer()
                         PlayButtonView(audioQuestion: audioQuestion, isPlaying: $isPlaying, audioPlayer: $audioPlayer)
                         Spacer()
                     }
-
+                    
                     ForEach(audioQuestion.options, id: \.self) { option in
                         ZStack {
                             OptionView(option: option, tint: audioQuestion.answer == option && tappedAnswer != "" ? Color.green : Color.black)
-
+                            
                             if tappedAnswer == option && tappedAnswer != audioQuestion.answer {
                                 OptionView(option: option, tint: Color.red)
                             }
@@ -284,3 +281,4 @@ struct JLPTN5AUDIOTEST: View {
         }
     }
 }
+

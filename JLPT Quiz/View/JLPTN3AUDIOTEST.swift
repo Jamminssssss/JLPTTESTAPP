@@ -109,12 +109,12 @@ struct JLPTN3AUDIOTEST: View {
         }
         .onAppear {
             questions = [
-                AudioQuestion(options: ["アウ", "アエ", "イウ", "イエ"], answer: "アエ", audioFile: "N3Q1", startTime: 165.0, endTime: 242.0, images: ["Image1"]),
+                AudioQuestion(options: ["アウ", "アエ", "イウ", "イエ"], answer: "アエ", audioFile: "N3Q1", startTime: 165.0, endTime: 242.0, images: ["image1"]),
                 AudioQuestion(options: ["水曜日", "木曜日", "金曜日", "土曜日"], answer: "金曜日", audioFile: "N3Q2", startTime: 243.0, endTime: 320.0),
                 AudioQuestion(options: ["さんかしゃを かくにんする", "店に電話する", "メールをかくにんする", "ないようを決める"], answer: "さんかしゃを かくにんする", audioFile: "N3Q3", startTime: 321.0, endTime: 406.0),
-                AudioQuestion(options: ["セミナーにもうしこむ", "テストをうける", "けいじばんを見る", "さんかひをふりこむ"], answer: "テストをうける", audioFile: "N3Q4", startTime: 407.0, endTime: 485.0),
-                AudioQuestion(options: ["ちょうさけっかを入力する", "サンプルをしてんに送る", "かいぎのじゅんびをする", "大野さんに仕事をたのむ"], answer: "ちょうさけっかを入力する", audioFile: "N3Q5", startTime: 487.0, endTime: 576.0),
-                AudioQuestion(options: ["たいそう教室にもうしこむ", "DVD を買う", "びょういんに行く", "スポーツクラブに行く"], answer: "DVD を買う", audioFile: "N3Q6", startTime: 578.0, endTime: 672.0)
+                AudioQuestion(options: ["セミナーにもうしこむ", "テストをうける", "けいじばんを見る", "さんかひをふりこむ"], answer: "テストをうける", audioFile: "N3Q4", startTime: 407.0, endTime: 485.0),
+                AudioQuestion(options: ["ちょうさけっかを入力する", "サンプルをしてんに送る", "かいぎのじゅんびをする", "大野さんに仕事をたのむ"], answer: "ちょうさけっかを入力する", audioFile: "N3Q5", startTime: 487.0, endTime: 576.0),
+                AudioQuestion(options: ["たいそう教室にもうしこむ", "DVD を買う", "びょういんに行く", "スポーツクラブに行く"], answer: "DVD を買う", audioFile: "N3Q6", startTime: 578.0, endTime: 672.0)
             ]
         }
     }
@@ -125,8 +125,6 @@ struct JLPTN3AUDIOTEST: View {
         @Binding var audioPlayer: AVAudioPlayer?
         
         var body: some View {
-            
-            
             HStack {
                 Button(action: {
                     toggleAudio(audioQuestion: audioQuestion)
@@ -205,62 +203,57 @@ struct JLPTN3AUDIOTEST: View {
             audioPlayer = nil
             isPlaying = false
         }
-        
     }
     
     struct QuestionView: View {
-        var audioQuestion: AudioQuestion
-        @Binding var tappedAnswer: String
-        var onTap: (String) -> Void
-        @State var isPlaying: Bool = false
-        @State var audioPlayer: AVAudioPlayer?
+            var audioQuestion: AudioQuestion
+            @Binding var tappedAnswer: String
+            var onTap: (String) -> Void
+            @State var isPlaying: Bool = false
+            @State var audioPlayer: AVAudioPlayer?
 
-        var body: some View {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 15) {
-                    
-                    // ForEach를 사용하여 여러 이미지를 표시합니다.
-                    ForEach(audioQuestion.images ?? [], id: \.self) {
-                        Image($0)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxHeight: 200)
-                            .cornerRadius(12)
-                            .padding(.bottom, 10)
-                    }
+            var body: some View {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 15) {
+                        ForEach(audioQuestion.images ?? [], id: \.self) { imageName in
+                                           Image(imageName)
+                                               .resizable()
+                                               .aspectRatio(contentMode: .fit)
+                                        
+                                       }
 
-                    
-                    HStack {
-                        Spacer()
-                        PlayButtonView(audioQuestion: audioQuestion, isPlaying: $isPlaying, audioPlayer: $audioPlayer)
-                        Spacer()
-                    }
+                        HStack {
+                            Spacer()
+                            PlayButtonView(audioQuestion: audioQuestion, isPlaying: $isPlaying, audioPlayer: $audioPlayer)
+                            Spacer()
+                        }
 
-                    ForEach(audioQuestion.options, id: \.self) { option in
-                        ZStack {
-                            OptionView(option: option, tint: audioQuestion.answer == option && tappedAnswer != "" ? Color.green : Color.black)
+                        ForEach(audioQuestion.options, id: \.self) { option in
+                            ZStack {
+                                OptionView(option: option, tint: audioQuestion.answer == option && tappedAnswer != "" ? Color.green : Color.black)
 
-                            if tappedAnswer == option && tappedAnswer != audioQuestion.answer {
-                                OptionView(option: option, tint: Color.red)
+                                if tappedAnswer == option && tappedAnswer != audioQuestion.answer {
+                                    OptionView(option: option, tint: Color.red)
+                                }
+                            }
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                onTap(option)
                             }
                         }
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            onTap(option)
-                        }
                     }
+                    .padding(.vertical, 10)
                 }
-                .padding(.vertical, 10)
+                .padding(15)
+                .hAlign(.center)
+                .background {
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .fill(Color.white.opacity(0.6))
+                }
+                .padding(.horizontal, 15)
             }
-            .padding(15)
-            .hAlign(.center)
-            .background {
-                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .fill(Color.white.opacity(0.6))
-            }
-            .padding(.horizontal, 15)
+
         }
-    }
 
     
     struct OptionView: View {
