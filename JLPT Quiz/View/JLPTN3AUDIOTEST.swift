@@ -9,7 +9,6 @@ import SwiftUI
 import AVFoundation
 
 struct JLPTN3AUDIOTEST: View {
-    @State private var quizInfo: Info?
     @State private var questions: [AudioQuestion] = []
     @State private var currentIndex: Int = 0
     @State private var score: CGFloat = 0
@@ -109,12 +108,12 @@ struct JLPTN3AUDIOTEST: View {
         }
         .onAppear {
             questions = [
-                AudioQuestion(options: ["アウ", "アエ", "イウ", "イエ"], answer: "アエ", audioFile: "N3Q1", startTime: 165.0, endTime: 242.0, images: ["image1"]),
-                AudioQuestion(options: ["水曜日", "木曜日", "金曜日", "土曜日"], answer: "金曜日", audioFile: "N3Q2", startTime: 243.0, endTime: 320.0),
-                AudioQuestion(options: ["さんかしゃを かくにんする", "店に電話する", "メールをかくにんする", "ないようを決める"], answer: "さんかしゃを かくにんする", audioFile: "N3Q3", startTime: 321.0, endTime: 406.0),
-                AudioQuestion(options: ["セミナーにもうしこむ", "テストをうける", "けいじばんを見る", "さんかひをふりこむ"], answer: "テストをうける", audioFile: "N3Q4", startTime: 407.0, endTime: 485.0),
-                AudioQuestion(options: ["ちょうさけっかを入力する", "サンプルをしてんに送る", "かいぎのじゅんびをする", "大野さんに仕事をたのむ"], answer: "ちょうさけっかを入力する", audioFile: "N3Q5", startTime: 487.0, endTime: 576.0),
-                AudioQuestion(options: ["たいそう教室にもうしこむ", "DVD を買う", "びょういんに行く", "スポーツクラブに行く"], answer: "DVD を買う", audioFile: "N3Q6", startTime: 578.0, endTime: 672.0)
+                AudioQuestion(options: ["アウ", "アエ", "イウ", "イエ"], answer: "アエ", audioFile: "N3Q1", startTime: 165.0, endTime: 242.0, images: ["Image1"]),
+                AudioQuestion(options: ["水曜日", "木曜日", "金曜日", "土曜日"], answer: "金曜日", audioFile: "N3Q1", startTime: 243.0, endTime: 320.0),
+                AudioQuestion(options: ["さんかしゃを かくにんする", "店に電話する", "メールをかくにんする", "ないようを決める"], answer: "さんかしゃを かくにんする", audioFile: "N3Q1", startTime: 321.0, endTime: 406.0),
+                AudioQuestion(options: ["セミナーにもうしこむ", "テストをうける", "けいじばんを見る", "さんかひをふりこむ"], answer: "テストをうける", audioFile: "N3Q1", startTime: 407.0, endTime: 485.0),
+                AudioQuestion(options: ["ちょうさけっかを入力する", "サンプルをしてんに送る", "かいぎのじゅんびをする", "大野さんに仕事をたのむ"], answer: "ちょうさけっかを入力する", audioFile: "N3Q1", startTime: 487.0, endTime: 576.0),
+                AudioQuestion(options: ["たいそう教室にもうしこむ", "DVD を買う", "びょういんに行く", "スポーツクラブに行く"], answer: "DVD を買う", audioFile: "N3Q1", startTime: 578.0, endTime: 672.0)
             ]
         }
     }
@@ -144,10 +143,10 @@ struct JLPTN3AUDIOTEST: View {
                         .foregroundColor(.blue)
                 }
             }
-            .onChange(of: audioQuestion.audioFile) { _, _ in
-                // Stop audio when the audio file changes (e.g., moving to the next question)
-                stopAudio()
-            }
+            .onChange(of: audioQuestion.audioFile) { _ in
+                       // 오디오 파일이 변경될 때(예: 다음 문제로 이동할 때) 오디오를 중지합니다.
+                       stopAudio()
+                   }
         }
         
         func toggleAudio(audioQuestion: AudioQuestion) {

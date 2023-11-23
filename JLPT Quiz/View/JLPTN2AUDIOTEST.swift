@@ -9,7 +9,6 @@ import SwiftUI
 import AVFoundation
 
 struct JLPTN2AUDIOTEST: View {
-    @State private var quizInfo: Info?
     @State private var questions: [AudioQuestion] = []
     @State private var currentIndex: Int = 0
     @State private var score: CGFloat = 0
@@ -109,10 +108,10 @@ struct JLPTN2AUDIOTEST: View {
         .onAppear {
             questions = [
                 AudioQuestion(options: ["先週の会議の記録を作成する", "調査結果を入力する", "林さんに電話をする", "プレゼンのしりょうを作成する"], answer: "先週の会議の記録を作成する", audioFile: "N2Q1", startTime: 158.0, endTime: 249.0),
-                AudioQuestion(options: ["2000円", "1000円", "900円", "100円"], answer: "900円", audioFile: "N2Q2", startTime: 249.0, endTime: 345.0),
-                AudioQuestion(options: ["ちゅうりんじょうで張り紙を見る", "大学でしんせいしょのじゅんびをする", "市役所にしんせいしょを取りに行く", "市役所でがくせいしょうをコピーする"], answer: "大学でしんせいしょのじゅんびをする", audioFile: "N2Q3", startTime: 345.0, endTime: 447.0),
-                AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q4", startTime: 447.0, endTime: 537.0),
-                AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q5", startTime: 538.0, endTime: 643.0)
+                AudioQuestion(options: ["2000円", "1000円", "900円", "100円"], answer: "900円", audioFile: "N2Q1", startTime: 249.0, endTime: 345.0),
+                AudioQuestion(options: ["ちゅうりんじょうで張り紙を見る", "大学でしんせいしょのじゅんびをする", "市役所にしんせいしょを取りに行く", "市役所でがくせいしょうをコピーする"], answer: "大学でしんせいしょのじゅんびをする", audioFile: "N2Q1", startTime: 345.0, endTime: 447.0),
+                AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q1", startTime: 447.0, endTime: 537.0),
+                AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q1", startTime: 538.0, endTime: 643.0)
             ]
         }
     }
@@ -142,10 +141,10 @@ struct JLPTN2AUDIOTEST: View {
                         .foregroundColor(.blue)
                 }
             }
-            .onChange(of: audioQuestion.audioFile) { _, _ in
-                // Stop audio when the audio file changes (e.g., moving to the next question)
-                stopAudio()
-            }
+            .onChange(of: audioQuestion.audioFile) { _ in
+                       // 오디오 파일이 변경될 때(예: 다음 문제로 이동할 때) 오디오를 중지합니다.
+                       stopAudio()
+                   }
         }
         
         func toggleAudio(audioQuestion: AudioQuestion) {

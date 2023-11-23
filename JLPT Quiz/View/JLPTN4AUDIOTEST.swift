@@ -9,7 +9,6 @@ import SwiftUI
 import AVFoundation
 
 struct JLPTN4AUDIOTEST: View {
-    @State private var quizInfo: Info?
     @State private var questions: [AudioQuestion] = []
     @State private var currentIndex: Int = 0
     @State private var score: CGFloat = 0
@@ -109,14 +108,14 @@ struct JLPTN4AUDIOTEST: View {
         }
         .onAppear {
             questions = [
-                AudioQuestion(options: ["アウ", "アエ", "イウ", "イエ"], answer: "アウ", audioFile: "N4Q1", startTime: 160.0, endTime: 236.0,images: ["image2"]),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N4Q2", startTime: 237.0, endTime: 312.0,images: ["image3"]),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "2", audioFile: "N4Q3", startTime: 313.0, endTime: 389.0,images: ["image4"]),
-                AudioQuestion(options: ["アイウエ", "アイウ", "イウエ", "イウ"], answer: "イウ", audioFile: "N4Q4", startTime: 389.0, endTime: 459.0,images: ["image5"]),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N4Q5", startTime: 460.0, endTime: 537.0,images: ["image6"]),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N4Q6", startTime: 538.0, endTime: 616.0,images: ["image7"]),
-                AudioQuestion(options: ["えき前の ほんや", "大学の 中の ほんや", "じむしょ", "しょくどうの 前"], answer: "じむしょ", audioFile: "N4Q7", startTime: 617.0, endTime: 687.0),
-                AudioQuestion(options: ["アイ", "アウ", "イウ", "イ"], answer: "アイ", audioFile: "N4Q8", startTime: 688.0, endTime: 773.0,images: ["image7"])
+                AudioQuestion(options: ["アウ", "アエ", "イウ", "イエ"], answer: "アウ", audioFile: "N4Q1", startTime: 160.0, endTime: 236.0,images: ["Image2"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N4Q1", startTime: 237.0, endTime: 312.0,images: ["Image3"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "2", audioFile: "N4Q1", startTime: 313.0, endTime: 389.0,images: ["Image4"]),
+                AudioQuestion(options: ["アイウエ", "アイウ", "イウエ", "イウ"], answer: "イウ", audioFile: "N4Q1", startTime: 389.0, endTime: 459.0,images: ["Image5"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N4Q1", startTime: 460.0, endTime: 537.0,images: ["Image6"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N4Q1", startTime: 538.0, endTime: 616.0,images: ["Image7"]),
+                AudioQuestion(options: ["えき前の ほんや", "大学の 中の ほんや", "じむしょ", "しょくどうの 前"], answer: "じむしょ", audioFile: "N4Q1", startTime: 617.0, endTime: 687.0),
+                AudioQuestion(options: ["アイ", "アウ", "イウ", "イ"], answer: "アイ", audioFile: "N4Q1", startTime: 688.0, endTime: 773.0,images: ["Image8"])
             ]
         }
     }
@@ -146,10 +145,10 @@ struct JLPTN4AUDIOTEST: View {
                         .foregroundColor(.blue)
                 }
             }
-            .onChange(of: audioQuestion.audioFile) { _, _ in
-                // Stop audio when the audio file changes (e.g., moving to the next question)
-                stopAudio()
-            }
+            .onChange(of: audioQuestion.audioFile) { _ in
+                       // 오디오 파일이 변경될 때(예: 다음 문제로 이동할 때) 오디오를 중지합니다.
+                       stopAudio()
+                   }
         }
         
         func toggleAudio(audioQuestion: AudioQuestion) {
