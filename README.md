@@ -1,5 +1,9 @@
 # JLPT Quiz
 
+
+https://github.com/Jamminssssss/JLPTTESTAPP/assets/91593937/19d87192-5dc4-44ed-b49a-3d9bbaeec5c1
+
+
 ## outline, summary
 
 It is an app that allows you to solve the JLPT questions in a quiz, collectively referred to as the Japanese proficiency test.
