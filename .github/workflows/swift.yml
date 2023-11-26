@@ -20,4 +20,4 @@ jobs:
       run: swift build -v
     - name: Run tests
       run: |
-        xcodebuild clean test -project JLPT-Quiz/JLPTQuiz.xcodeproj -scheme JLPT-Quiz -destination 'platform=iOS Simulator,name=iPhone 13 Pro,OS=16.0'
+        xcodebuild clean test -project JLPTQuiz.xcodeproj -scheme JLPT-Quiz -destination 'platform=iOS Simulator,name=iPhone 13 Pro,OS=16.0'
