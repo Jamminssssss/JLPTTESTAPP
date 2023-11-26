@@ -19,5 +19,7 @@ jobs:
     - name: Build
       run: swift build -v
     - name: Run tests
-      run:  swift test -v
+      run:  |
+        pod install --repo-update --clean-install --project-directory=JLPT-Quiz/
+        xcodebuild clean test -workspace JLPT-Quiz/JLPTQuiz.xcworkspace -scheme JLPT-Quiz -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
 
