@@ -56,7 +56,7 @@ struct JLPTN1AUDIOTEST: View {
                 }
                 .clipShape(Capsule())
             }
-            .frame(height: 20)
+            .frame(height: 21)
             .padding(.top, 5)
             
             if !questions.isEmpty, questions.indices.contains(currentIndex) {
