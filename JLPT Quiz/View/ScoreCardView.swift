@@ -18,7 +18,7 @@ struct ScoreCardView: View {
         VStack {
             Spacer() // Add this line
             VStack(spacing: 15) {
-                Text("당신의\n 정답률은?")
+                Text("당신의\n 정답률은???")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
