@@ -185,7 +185,7 @@ struct JLPTN1: View {
         ScrollView {
             Text(option)
                 .fixedSize(horizontal: false, vertical: true)
-                .font(.system(size: 24 + fontSizeChange))
+                .font(.system(size: 25 + fontSizeChange))
                 .foregroundColor(tint)
                 .padding(.horizontal,5)
                 .padding(.vertical,10)
