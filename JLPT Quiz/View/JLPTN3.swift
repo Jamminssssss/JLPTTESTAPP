@@ -100,7 +100,7 @@ struct JLPTN3: View {
                 }
             }
         }else{
-            VStack(spacing: 4){
+            VStack(spacing: 5){
                 ProgressView()
                 Text("잠시만 기다려 주세요")
                     .font(.caption2)
