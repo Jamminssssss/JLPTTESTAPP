@@ -33,7 +33,12 @@
 		16B4ED1D2B02F9AC006DD1EC /* SelectAudioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4ED1C2B02F9AC006DD1EC /* SelectAudioTest.swift */; };
 		16B4ED1F2B02F9C1006DD1EC /* JLPTN1AUDIOTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4ED1E2B02F9C1006DD1EC /* JLPTN1AUDIOTEST.swift */; };
 		16B58C782B05E171001328BE /* N1Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16B58C772B05E171001328BE /* N1Q1.mp3 */; };
+<<<<<<< Updated upstream
 		16B5F1AD2B142CE400866B55 /* N1Q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16B5F1AC2B142CE400866B55 /* N1Q2.mp3 */; };
+=======
+		16B5F1A92B1427BA00866B55 /* N1Q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16B5F1A82B1427BA00866B55 /* N1Q2.mp3 */; };
+		16B5F1AB2B1428AD00866B55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16B5F1AA2B1428AD00866B55 /* GoogleService-Info.plist */; };
+>>>>>>> Stashed changes
 		16EB684E2AD683D6008E695E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB684D2AD683D6008E695E /* CustomButton.swift */; };
 		16F7A73E2B08737D003F8E67 /* JLPTN2AUDIOTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A73D2B08737D003F8E67 /* JLPTN2AUDIOTEST.swift */; };
 		16F7A7402B08738C003F8E67 /* JLPTN3AUDIOTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7A73F2B08738C003F8E67 /* JLPTN3AUDIOTEST.swift */; };
@@ -66,7 +71,12 @@
 		16B4ED1C2B02F9AC006DD1EC /* SelectAudioTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAudioTest.swift; sourceTree = "<group>"; };
 		16B4ED1E2B02F9C1006DD1EC /* JLPTN1AUDIOTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN1AUDIOTEST.swift; sourceTree = "<group>"; };
 		16B58C772B05E171001328BE /* N1Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q1.mp3; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		16B5F1AC2B142CE400866B55 /* N1Q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q2.mp3; sourceTree = "<group>"; };
+=======
+		16B5F1A82B1427BA00866B55 /* N1Q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q2.mp3; sourceTree = "<group>"; };
+		16B5F1AA2B1428AD00866B55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		16EB684D2AD683D6008E695E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		16F7A73D2B08737D003F8E67 /* JLPTN2AUDIOTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN2AUDIOTEST.swift; sourceTree = "<group>"; };
 		16F7A73F2B08738C003F8E67 /* JLPTN3AUDIOTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTN3AUDIOTEST.swift; sourceTree = "<group>"; };
@@ -120,6 +130,7 @@
 				16861F5C2AD2C849001B0F81 /* Model */,
 				160ADA4F2AD18957006FC41D /* JLPT_QuizApp.swift */,
 				160ADA512AD18957006FC41D /* ContentView.swift */,
+				16B5F1AA2B1428AD00866B55 /* GoogleService-Info.plist */,
 				160ADA532AD18958006FC41D /* Assets.xcassets */,
 				160ADA552AD18958006FC41D /* Preview Content */,
 			);
@@ -138,7 +149,11 @@
 			isa = PBXGroup;
 			children = (
 				16B58C772B05E171001328BE /* N1Q1.mp3 */,
+<<<<<<< Updated upstream
 				16B5F1AC2B142CE400866B55 /* N1Q2.mp3 */,
+=======
+				16B5F1A82B1427BA00866B55 /* N1Q2.mp3 */,
+>>>>>>> Stashed changes
 			);
 			path = JLPTN1AUDIO;
 			sourceTree = "<group>";
@@ -275,8 +290,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< Updated upstream
 				16B5F1AD2B142CE400866B55 /* N1Q2.mp3 in Resources */,
+=======
+				16B5F1A92B1427BA00866B55 /* N1Q2.mp3 in Resources */,
+>>>>>>> Stashed changes
 				16F7A74D2B08865E003F8E67 /* N2Q1.mp3 in Resources */,
+				16B5F1AB2B1428AD00866B55 /* GoogleService-Info.plist in Resources */,
 				1657A7722B08C518004E9818 /* N3Q1.mp3 in Resources */,
 				1657A7762B08C6E3004E9818 /* N4Q1.mp3 in Resources */,
 				1657A77A2B08C842004E9818 /* N5Q1.mp3 in Resources */,
