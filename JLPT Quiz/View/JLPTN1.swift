@@ -5,7 +5,6 @@
 //  Created by Jeamin on 10/8/23.
 //
 
-import SwiftUI
 import FirebaseFirestore
 import FirebaseAuth
 import Foundation
