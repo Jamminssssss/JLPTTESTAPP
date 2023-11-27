@@ -62,7 +62,7 @@ struct JLPTN1: View {
                     .clipShape(Capsule())
                 }
                 .frame(height: 20)
-                .padding(.top,5)
+                .padding(.top,6)
                 
                 GeometryReader{
                     let _ = $0.size
