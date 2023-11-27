@@ -114,8 +114,7 @@ struct JLPTN1AUDIOTEST: View {
                 AudioQuestion(options: ["見積もりの合計金額を見直す", "見積もり金額の内訳を詳しく書く", "バスが確保できたかかくにんする", "見積書の有効期限を書く"], answer: "見積もり金額の内訳を詳しく書く", audioFile: "N1Q1", startTime: 346.0, endTime: 448.0),
                 AudioQuestion(options: ["企画書を修正する", "出張の資料を作成する", "店の予約をキャンセルする", "会食に使う店を探す"], answer: "企画書を修正する", audioFile: "N1Q1", startTime: 448.0, endTime: 552.0),
                 AudioQuestion(options: ["研修期間を長くする", "店の経営理念を伝える", "時給を上げる", "業務のしゅうじゅくどを評価する"], answer: "店の経営理念を伝える", audioFile: "N1Q1", startTime: 552.0, endTime: 681.0),
-                AudioQuestion(options: ["投書らんを設ける", "政策関連の記事に図を用いる", "イベント情報の記事を増やす", "子育て関連の記事を増やす"], answer: "政策関連の記事に図を用いる", audioFile: "N1Q1", startTime: 681.0, endTime: 799.0),
-                AudioQuestion(options: ["料理が冷めにくいから", "丈夫で長持ちするから", "安くて見た目がはなやかだから", "いろいろな調理に使えるから"], answer: "丈夫で長持ちするから", audioFile: "N1Q2", startTime: 158.0, endTime: 291.0),
+                AudioQuestion(options: ["投書らんを設ける", "政策関連の記事に図を用いる", "イベント情報の記事を増やす", "子育て関連の記事を増やす"], answer: "政策関連の記事に図を用いる", audioFile: "N1Q1", startTime: 681.0, endTime: 799.0)
             ]
         }
     }
