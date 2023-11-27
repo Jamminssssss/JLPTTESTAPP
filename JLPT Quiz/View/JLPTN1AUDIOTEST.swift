@@ -115,7 +115,9 @@ struct JLPTN1AUDIOTEST: View {
                 AudioQuestion(options: ["企画書を修正する", "出張の資料を作成する", "店の予約をキャンセルする", "会食に使う店を探す"], answer: "企画書を修正する", audioFile: "N1Q1", startTime: 448.0, endTime: 552.0),
                 AudioQuestion(options: ["研修期間を長くする", "店の経営理念を伝える", "時給を上げる", "業務のしゅうじゅくどを評価する"], answer: "店の経営理念を伝える", audioFile: "N1Q1", startTime: 552.0, endTime: 681.0),
                 AudioQuestion(options: ["投書らんを設ける", "政策関連の記事に図を用いる", "イベント情報の記事を増やす", "子育て関連の記事を増やす"], answer: "政策関連の記事に図を用いる", audioFile: "N1Q1", startTime: 681.0, endTime: 799.0),
-                AudioQuestion(options: ["料理が冷めにくいから", "丈夫で長持ちするから", "安くて見た目がはなやかだから", "いろいろな調理に使えるから"], answer: "丈夫で長持ちするから", audioFile: "N1Q2", startTime: 158.0, endTime: 290.0)
+                AudioQuestion(options: ["料理が冷めにくいから", "丈夫で長持ちするから", "安くて見た目がはなやかだから", "いろいろな調理に使えるから"], answer: "丈夫で長持ちするから", audioFile: "N1Q2", startTime: 158.0, endTime: 290.0),
+                AudioQuestion(options: ["上司が応募を 快く思わないこと", "新しい部署に採用される可能性が低いこと", "商品開発の仕事の経験がないこと", "不採用だったら今の部署にいづらくなること"], answer: "不採用だったら今の部署にいづらくなること", audioFile: "N1Q2", startTime: 292.0, endTime: 419.0),
+                AudioQuestion(options: ["ほかの学校に転校したこと", "友達が迎えに来てくれたこと", "先生が相談に乗ってくれたこと", "同じ経験をもつ人と話せたこと"], answer: "友達が迎えに来てくれたこと", audioFile: "N1Q2", startTime: 421.0, endTime: 558.0)
             ]
         }
     }
