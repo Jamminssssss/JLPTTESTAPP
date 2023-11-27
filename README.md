@@ -1,6 +1,7 @@
 # JLPT Quiz
 
-/Users/jaeminpark/Downloads/무제 프로젝트.mp4
+
+https://github.com/Jamminssssss/JLPTTESTAPP/assets/91593937/b16e3683-52cb-4415-8bbd-c7528f754ad5
 
 ## outline, summary
 
