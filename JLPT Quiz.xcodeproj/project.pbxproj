@@ -14,6 +14,7 @@
 		1657A7722B08C518004E9818 /* N3Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7712B08C517004E9818 /* N3Q1.mp3 */; };
 		1657A7762B08C6E3004E9818 /* N4Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7752B08C6E3004E9818 /* N4Q1.mp3 */; };
 		1657A77A2B08C842004E9818 /* N5Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7792B08C842004E9818 /* N5Q1.mp3 */; };
+		166D570B2B1450DA0081A0A7 /* N1Q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 166D570A2B1450DA0081A0A7 /* N1Q2.mp3 */; };
 		167D3D482AEA8445004405FD /* ProblemSolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D3D472AEA8445004405FD /* ProblemSolving.swift */; };
 		16861F612AD2D212001B0F81 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F602AD2D212001B0F81 /* Info.swift */; };
 		16861F632AD2D247001B0F81 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F622AD2D247001B0F81 /* Question.swift */; };
@@ -50,6 +51,7 @@
 		1657A7712B08C517004E9818 /* N3Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N3Q1.mp3; sourceTree = "<group>"; };
 		1657A7752B08C6E3004E9818 /* N4Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N4Q1.mp3; sourceTree = "<group>"; };
 		1657A7792B08C842004E9818 /* N5Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N5Q1.mp3; sourceTree = "<group>"; };
+		166D570A2B1450DA0081A0A7 /* N1Q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q2.mp3; sourceTree = "<group>"; };
 		1676EAA72AD4F24800B913A1 /* JLPT Quiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "JLPT Quiz.entitlements"; sourceTree = "<group>"; };
 		167D3D472AEA8445004405FD /* ProblemSolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSolving.swift; sourceTree = "<group>"; };
 		16861F602AD2D212001B0F81 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				16B58C772B05E171001328BE /* N1Q1.mp3 */,
+				166D570A2B1450DA0081A0A7 /* N1Q2.mp3 */,
 			);
 			path = JLPTN1AUDIO;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F7A74D2B08865E003F8E67 /* N2Q1.mp3 in Resources */,
+				166D570B2B1450DA0081A0A7 /* N1Q2.mp3 in Resources */,
 				1657A7722B08C518004E9818 /* N3Q1.mp3 in Resources */,
 				1657A7762B08C6E3004E9818 /* N4Q1.mp3 in Resources */,
 				1657A77A2B08C842004E9818 /* N5Q1.mp3 in Resources */,
