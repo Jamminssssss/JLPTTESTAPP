@@ -111,7 +111,7 @@ struct JLPTN2AUDIOTEST: View {
                 AudioQuestion(options: ["2000円", "1000円", "900円", "100円"], answer: "900円", audioFile: "N2Q1", startTime: 249.0, endTime: 345.0),
                 AudioQuestion(options: ["ちゅうりんじょうで張り紙を見る", "大学でしんせいしょのじゅんびをする", "市役所にしんせいしょを取りに行く", "市役所でがくせいしょうをコピーする"], answer: "大学でしんせいしょのじゅんびをする", audioFile: "N2Q1", startTime: 345.0, endTime: 447.0),
                 AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q1", startTime: 447.0, endTime: 537.0),
-                AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q1", startTime: 538.0, endTime: 643.0),
+                AudioQuestion(options: ["工場の かんりのじょうきょうを 調べる", "けいやくのうかに じょうきょうを聞く", "運送会社にじょうきょうを聞く", "そうこの ほぞんじょうきょうを 調べる"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q1", startTime: 538.0, endTime: 643.0),
                 AudioQuestion(options: ["近所で起こった事件について調べるため", "さいがい時のひなん場所を知らせるため", "どこにだれが住んでいるのか知るため", "たんとうちいきの住民にあいさつするため"], answer: "どこにだれが住んでいるのか知るため", audioFile: "N2Q2", startTime: 153.0, endTime: 255.0),
                 AudioQuestion(options: ["きんちょうして落ち着きがなかったこと", "話の進め方が適当でなかったこと", "声が小さくて聞き取りにくかったこと", "質問への対応がよくなかったこと"], answer: "話の進め方が適当でなかったこと", audioFile: "N2Q2", startTime: 257.0, endTime: 371.0),
                 AudioQuestion(options: ["スタッフの数がそろっていないから", "店の工事が間に合わないから", "メニューが決まっていないから", "注文した食器がとどいていないから"], answer: "スタッフの数がそろっていないから", audioFile: "N2Q2", startTime: 373.0, endTime: 490.0),
