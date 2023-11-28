@@ -111,7 +111,13 @@ struct JLPTN2AUDIOTEST: View {
                 AudioQuestion(options: ["2000円", "1000円", "900円", "100円"], answer: "900円", audioFile: "N2Q1", startTime: 249.0, endTime: 345.0),
                 AudioQuestion(options: ["ちゅうりんじょうで張り紙を見る", "大学でしんせいしょのじゅんびをする", "市役所にしんせいしょを取りに行く", "市役所でがくせいしょうをコピーする"], answer: "大学でしんせいしょのじゅんびをする", audioFile: "N2Q1", startTime: 345.0, endTime: 447.0),
                 AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q1", startTime: 447.0, endTime: 537.0),
-                AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q1", startTime: 538.0, endTime: 643.0)
+                AudioQuestion(options: ["インターネットで店をさがす", "木村さんに道具を借りる", "アウトドア用品の店で道具を買う", "初心者向けのこうざに参加する"], answer: "大初心者向けのこうざに参加する", audioFile: "N2Q1", startTime: 538.0, endTime: 643.0),
+                AudioQuestion(options: ["近所で起こった事件について調べるため", "さいがい時のひなん場所を知らせるため", "どこにだれが住んでいるのか知るため", "たんとうちいきの住民にあいさつするため"], answer: "どこにだれが住んでいるのか知るため", audioFile: "N2Q2", startTime: 153.0, endTime: 255.0),
+                AudioQuestion(options: ["きんちょうして落ち着きがなかったこと", "話の進め方が適当でなかったこと", "声が小さくて聞き取りにくかったこと", "質問への対応がよくなかったこと"], answer: "話の進め方が適当でなかったこと", audioFile: "N2Q2", startTime: 257.0, endTime: 371.0),
+                AudioQuestion(options: ["スタッフの数がそろっていないから", "店の工事が間に合わないから", "メニューが決まっていないから", "注文した食器がとどいていないから"], answer: "スタッフの数がそろっていないから", audioFile: "N2Q2", startTime: 373.0, endTime: 490.0),
+                AudioQuestion(options: ["考え事をするため", "頭の中を整理するため", "のうを休めるため", "体をリラックスさせるため"], answer: "頭の中を整理するため", audioFile: "N2Q2", startTime: 491.0, endTime: 606.0),
+                AudioQuestion(options: ["すぐに社会に役立つ研究が少ないこと", "産業界の協力が得られなくなること", "実用化までに時間がかかりすぎること", "きそ研究がじゅうしされなくなること"], answer: "きそ研究がじゅうしされなくなること", audioFile: "N2Q2", startTime: 607.0, endTime: 730.0),
+                AudioQuestion(options: ["電気をつけておく時間が設定できる", "動くものに反応して電気がつく", "電気の明るさが細かくちょうせつできる", "外の明るさに応じて電気の明るさが変わる"], answer: "電気をつけておく時間が設定できる", audioFile: "N2Q2", startTime: 731.0, endTime: 825.0),
             ]
         }
     }
