@@ -117,7 +117,11 @@ struct JLPTN1AUDIOTEST: View {
                 AudioQuestion(options: ["投書らんを設ける", "政策関連の記事に図を用いる", "イベント情報の記事を増やす", "子育て関連の記事を増やす"], answer: "政策関連の記事に図を用いる", audioFile: "N1Q1", startTime: 681.0, endTime: 799.0),
                 AudioQuestion(options: ["料理が冷めにくいから", "丈夫で長持ちするから", "安くて見た目がはなやかだから", "いろいろな調理に使えるから"], answer: "丈夫で長持ちするから", audioFile: "N1Q2", startTime: 158.0, endTime: 290.0),
                 AudioQuestion(options: ["上司が応募を 快く思わないこと", "新しい部署に採用される可能性が低いこと", "商品開発の仕事の経験がないこと", "不採用だったら今の部署にいづらくなること"], answer: "不採用だったら今の部署にいづらくなること", audioFile: "N1Q2", startTime: 292.0, endTime: 419.0),
-                AudioQuestion(options: ["ほかの学校に転校したこと", "友達が迎えに来てくれたこと", "先生が相談に乗ってくれたこと", "同じ経験をもつ人と話せたこと"], answer: "友達が迎えに来てくれたこと", audioFile: "N1Q2", startTime: 421.0, endTime: 558.0)
+                AudioQuestion(options: ["ほかの学校に転校したこと", "友達が迎えに来てくれたこと", "先生が相談に乗ってくれたこと", "同じ経験をもつ人と話せたこと"], answer: "友達が迎えに来てくれたこと", audioFile: "N1Q2", startTime: 421.0, endTime: 558.0),
+                AudioQuestion(options: ["世界初のロボットの誕生", "ロボットの定義づけ", "ロボットの社会的使命", "ロボット製作に必要な情報処理"], answer: "世界初のロボットの誕生", audioFile: "N1Q2", startTime: 559.0, endTime: 667.0),
+                AudioQuestion(options: ["集落のいせきとして国内最古のものであること", "国内のいせきの中で規模が最も大きいこと", "高度な技術で作った道具が見つかったこと", "食料として作物を育てていたことがわかったこと"], answer: "食料として作物を育てていたことがわかったこと", audioFile: "N1Q2", startTime: 668.0, endTime: 780.0),
+                AudioQuestion(options: ["安全性を確保した通学路にすること", "防犯のために街灯の数を増やすこと", "住民が交流できる施設を建てること", "災害時の避難場所を作ること"], answer: "安全性を確保した通学路にすること", audioFile: "N1Q2", startTime: 782.0, endTime: 922.0),
+                AudioQuestion(options: ["政治に関心をもたない人が増えたから", "候補者間の主張の違いが不明確だったから", "現職の知事の勝利が確実だったから", "投票の時期が年末で忙しい人が多かったから"], answer: "候補者間の主張の違いが不明確だったから", audioFile: "N1Q2", startTime: 923.0, endTime: 1040.0)
             ]
         }
     }
