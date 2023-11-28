@@ -16,8 +16,9 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build
         run: swift build -v
-      - name: Run tests
-        run: swift test -v
+      - name: Start xcode build 🛠
+        run: |
+          xcodebuild clean test -project JLPT-Quiz/JLPT Quiz.xcodeproj -scheme JLPT-Quiz -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=latest'
       - name: Notify Slack
         uses: 8398a7/action-slack@v3
         with:
@@ -25,4 +26,4 @@ jobs:
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took,pullRequest
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        if: always() # Pick up events even if the job fails or is canceled.
+      - if: always() # Pick up events even if the job fails or is canceled.
