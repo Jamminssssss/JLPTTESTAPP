@@ -113,7 +113,13 @@ struct JLPTN3AUDIOTEST: View {
                 AudioQuestion(options: ["さんかしゃを かくにんする", "店に電話する", "メールをかくにんする", "ないようを決める"], answer: "さんかしゃを かくにんする", audioFile: "N3Q1", startTime: 321.0, endTime: 406.0),
                 AudioQuestion(options: ["セミナーにもうしこむ", "テストをうける", "けいじばんを見る", "さんかひをふりこむ"], answer: "テストをうける", audioFile: "N3Q1", startTime: 407.0, endTime: 485.0),
                 AudioQuestion(options: ["ちょうさけっかを入力する", "サンプルをしてんに送る", "かいぎのじゅんびをする", "大野さんに仕事をたのむ"], answer: "ちょうさけっかを入力する", audioFile: "N3Q1", startTime: 487.0, endTime: 576.0),
-                AudioQuestion(options: ["たいそう教室にもうしこむ", "DVD を買う", "びょういんに行く", "スポーツクラブに行く"], answer: "DVD を買う", audioFile: "N3Q1", startTime: 578.0, endTime: 672.0)
+                AudioQuestion(options: ["たいそう教室にもうしこむ", "DVD を買う", "びょういんに行く", "スポーツクラブに行く"], answer: "DVD を買う", audioFile: "N3Q1", startTime: 578.0, endTime: 672.0),
+                AudioQuestion(options: ["気に入ったのがなかったから", "今すぐ買うひつようが なくなったから", "ねだんが高かったから", "おっとといっしょに えらびたかったから"], answer: "今すぐ買うひつようが なくなったから", audioFile: "N3Q2", startTime: 153.0, endTime: 252.0),
+                AudioQuestion(options: ["年をとってからの生活のため", "家を買うため", "海外旅行をするため", "りゅうがくするため"], answer: "りゅうがくするため", audioFile: "N3Q2", startTime: 253.0, endTime: 363.0),
+                AudioQuestion(options: ["ペットをびょういんにつれて行くから", "母がけがをしたから", "アルバイトに行くから", "クラブの話し合いがあるから"], answer: "ペットをびょういんにつれて行くから", audioFile: "N3Q2", startTime: 365.0, endTime: 459.0),
+                AudioQuestion(options: ["サラさんの友人に教えてもらう", "テレビを見て自分で勉強する", "インターネットでレッスンをうける", "外国語の学校に通う"], answer: "サラさんの友人に教えてもらう", audioFile: "N3Q2", startTime: 461.0, endTime: 601.0),
+                AudioQuestion(options: ["朝食のメニューが売れていない", "近所の人があまり来てくれない", "こんでいてもせきを空けないきゃくがいる", "ことばづかいがよくない店員がいる"], answer: "こんでいてもせきを空けないきゃくがいる", audioFile: "N3Q2", startTime: 602.0, endTime: 719.0),
+                AudioQuestion(options: ["せんぱいにしりょうを見せる", "ちょうさをしなおす", "しりょうにグラフをくわえる", "はっぴょうのながれを かえる"], answer: "はっぴょうのながれを かえる", audioFile: "N3Q2", startTime: 720.0, endTime: 838.0),
             ]
         }
     }

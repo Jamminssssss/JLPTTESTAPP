@@ -16,6 +16,7 @@
 		1657A77A2B08C842004E9818 /* N5Q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1657A7792B08C842004E9818 /* N5Q1.mp3 */; };
 		166D570B2B1450DA0081A0A7 /* N1Q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 166D570A2B1450DA0081A0A7 /* N1Q2.mp3 */; };
 		166E97D22B15D57A008FC2CE /* N2Q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 166E97D12B15D57A008FC2CE /* N2Q2.mp3 */; };
+		166E97D82B171113008FC2CE /* N3Q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 166E97D72B171113008FC2CE /* N3Q2.mp3 */; };
 		167D3D482AEA8445004405FD /* ProblemSolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D3D472AEA8445004405FD /* ProblemSolving.swift */; };
 		16861F612AD2D212001B0F81 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F602AD2D212001B0F81 /* Info.swift */; };
 		16861F632AD2D247001B0F81 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16861F622AD2D247001B0F81 /* Question.swift */; };
@@ -54,6 +55,7 @@
 		1657A7792B08C842004E9818 /* N5Q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N5Q1.mp3; sourceTree = "<group>"; };
 		166D570A2B1450DA0081A0A7 /* N1Q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N1Q2.mp3; sourceTree = "<group>"; };
 		166E97D12B15D57A008FC2CE /* N2Q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N2Q2.mp3; sourceTree = "<group>"; };
+		166E97D72B171113008FC2CE /* N3Q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N3Q2.mp3; sourceTree = "<group>"; };
 		1676EAA72AD4F24800B913A1 /* JLPT Quiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "JLPT Quiz.entitlements"; sourceTree = "<group>"; };
 		167D3D472AEA8445004405FD /* ProblemSolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSolving.swift; sourceTree = "<group>"; };
 		16861F602AD2D212001B0F81 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1657A7712B08C517004E9818 /* N3Q1.mp3 */,
+				166E97D72B171113008FC2CE /* N3Q2.mp3 */,
 			);
 			path = JLPTN3AUDIO;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				160ADA572AD18958006FC41D /* Preview Assets.xcassets in Resources */,
 				160ADA542AD18958006FC41D /* Assets.xcassets in Resources */,
 				16B58C782B05E171001328BE /* N1Q1.mp3 in Resources */,
+				166E97D82B171113008FC2CE /* N3Q2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
