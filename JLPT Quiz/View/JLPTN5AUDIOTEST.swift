@@ -115,7 +115,13 @@ struct JLPTN5AUDIOTEST: View {
                 AudioQuestion(options: ["1", "2", "3", "4"], answer: "2", audioFile: "N5Q1", startTime: 344.0, endTime: 413.0,images: ["Image12"]),
                 AudioQuestion(options: ["げつようび", "かようび", "もくようび", "きんようび"], answer: "げつようび", audioFile: "N5Q1", startTime: 414.0, endTime: 500.0),
                 AudioQuestion(options: ["1かいの 3ばん", "1かいの 4ばん", "2かいの 3ばん", "2かいの 4ばん"], answer: "2かいの 4ばん", audioFile: "N5Q1", startTime: 502.0, endTime: 562.0),
-                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q1", startTime: 564.0, endTime: 635.0,images: ["Image13"])
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q1", startTime: 564.0, endTime: 635.0,images: ["Image13"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "4", audioFile: "N5Q2", startTime: 121.0, endTime: 176.0,images: ["Image14"]),
+                AudioQuestion(options: ["ひとり", "ふたり", "さんにん", "よにん"], answer: "ひとり", audioFile: "N5Q2", startTime: 177.0, endTime: 233.0),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N5Q2", startTime: 234.0, endTime: 309.0,images: ["Image15"]),
+                AudioQuestion(options: ["1", "2", "3", "4"], answer: "1", audioFile: "N5Q2", startTime: 310.0, endTime: 386.0,images: ["Image16"]),
+                AudioQuestion(options: ["1 じかんはん", "3 じかんはん", "5じかん", "6じかん"], answer: "3 じかんはん", audioFile: "N5Q2", startTime: 388.0, endTime: 467.0),
+                AudioQuestion(options: ["カレー", "ピザ", "すし", "そば"], answer: "ピザ", audioFile: "N5Q2", startTime: 468.0, endTime: 542.0)
             ]
            
         }

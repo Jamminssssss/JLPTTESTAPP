@@ -31,15 +31,14 @@ struct ContentView: View {
             .tag(1)
             
             NavigationView {
-                ProblemSolving()
+                SelectVideo()
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "play.display")
-                Text("講義")
+                Text("lecture")
             }
             .tag(2)
-            
         }
     }
 }
