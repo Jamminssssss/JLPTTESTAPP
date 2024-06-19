@@ -153,8 +153,12 @@ struct JLPTN1AUDIOTEST: View {
                 }
             }
             .onChange(of: audioQuestion.audioFile) { _ in
-                       // 오디오 파일이 변경될 때(예: 다음 문제로 이동할 때) 오디오를 중지합니다.
-                       stopAudio()
+                // 오디오 파일이 변경될 때(예: 다음 문제로 이동할 때) 오디오를 중지합니다.
+                stopAudio()
+            }
+            .onDisappear {
+                // Stop the audio when the view disappears (e.g., app exits)
+                stopAudio()
             }
         }
         
