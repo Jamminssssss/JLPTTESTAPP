@@ -115,7 +115,14 @@ struct JLPTN4AUDIOTEST: View {
                 AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N4Q1", startTime: 460.0, endTime: 537.0,images: ["Image6"]),
                 AudioQuestion(options: ["1", "2", "3", "4"], answer: "3", audioFile: "N4Q1", startTime: 538.0, endTime: 616.0,images: ["Image7"]),
                 AudioQuestion(options: ["えき前の ほんや", "大学の 中の ほんや", "じむしょ", "しょくどうの 前"], answer: "じむしょ", audioFile: "N4Q1", startTime: 617.0, endTime: 687.0),
-                AudioQuestion(options: ["アイ", "アウ", "イウ", "イ"], answer: "アイ", audioFile: "N4Q1", startTime: 688.0, endTime: 773.0,images: ["Image8"])
+                AudioQuestion(options: ["アイ", "アウ", "イウ", "イ"], answer: "アイ", audioFile: "N4Q1", startTime: 688.0, endTime: 773.0,images: ["Image8"]),
+                AudioQuestion(options: ["うみの ちかくで しょくじした", "山に のぼった", "うみで およいだ", "かいがんを さんぽした"], answer: "うみの ちかくで しょくじした", audioFile: "N4Q2", startTime: 143.0, endTime: 250.0),
+                AudioQuestion(options: ["ジュース", "アイスクリーム", "キャンディー", "クッキー"], answer: "アイスクリーム", audioFile: "N4Q2", startTime: 251.0, endTime: 346.0),
+                AudioQuestion(options: ["山本さんが きょうしつに いるとき", "山本さんが きょうしつを 出たとき", "山本さんが としょかんに いるとき", "山本さんが としょかんを 出たとき"], answer: "山本さんが としょかんを 出たとき", audioFile: "N4Q2", startTime: 347.0, endTime: 459.0),
+                AudioQuestion(options: ["あく 時間が はやく なる", "しまる 時間が おそく なる", "中学生いかは ただに なる", "チケットが 安く なる"], answer: "しまる 時間が おそく なる", audioFile: "N4Q2", startTime: 461.0, endTime: 568.0),
+                AudioQuestion(options: ["いろいろな ばしょに おいて あること", "うって いる ものの しゅるいが 多いこと", "ことばを 話すこと", "お金が ぬすまれないこと"], answer: "うって いる ものの しゅるいが 多いこと", audioFile: "N4Q2", startTime: 570.0, endTime: 684.0),
+                AudioQuestion(options: ["5時から 5時半まで", "5時から 6時まで", "5時半から 6時まで", "5時半から 6時半まで"], answer: "5時半から 6時半まで", audioFile: "N4Q2", startTime: 686.0, endTime: 779.0),
+                AudioQuestion(options: ["食べものの 店が たくさん あるから", "まつりが あって にぎやかだから", "ふねの 上で さくらが 見られるから", "会社から あるいて 行けるから"], answer: "ふねの 上で さくらが 見られるから", audioFile: "N4Q2", startTime: 780.0, endTime: 893.0),
             ]
         }
     }
