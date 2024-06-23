@@ -41,6 +41,3 @@ struct AudioQuestion {
         self.images = images
     }
 }
-
-
-

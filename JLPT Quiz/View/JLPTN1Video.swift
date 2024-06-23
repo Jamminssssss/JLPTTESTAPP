@@ -32,6 +32,7 @@ struct JLPTN1Video: View {
             }) {
                 Image(systemName: "xmark")
                     .foregroundColor(.red) // 이미지를 빨간색으로 변경합니다
+                
             })
         }
     }
@@ -76,7 +77,5 @@ class PlayerViewModel: NSObject, ObservableObject {
             }
         }
     }
-}
-
-
+  }
 }
